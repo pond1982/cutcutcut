@@ -15,7 +15,7 @@
 <link rel="alternate" type="application/rss+xml" title="Cut Cut Cut dev log" href="feed.xml">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;1,800;1,900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=130111a8">
+<link rel="stylesheet" href="style.css?v=f986191d">
 <link rel="stylesheet" href="pondd-character/character.css">
 <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>
 <script type="module" src="pondd-character/init.js"></script>
@@ -39,6 +39,7 @@
     <p class="sub">An isometric sword game for iPhone. Rin, a dismissed bodyguard, climbs a sealed 100-floor tower with her family's sword, one room at a time. The residents are still at work. They would like you to stop calling them zombies.</p>
     <div class="cta">
       <a class="btn red" href="#play"><span>See it in play</span></a>
+      <a class="btn" href="#signup"><span>Get notified</span></a>
       <a class="btn" href="devlog/index.html"><span>Read the dev log</span></a>
     </div>
     <div class="status"><i></i> In development · iPhone, landscape · Build 0.1 on TestFlight</div>
@@ -54,6 +55,17 @@
     </div>
     <div class="reel-player" data-clips="[{&quot;src&quot;: &quot;media/reel/first-fight.mp4&quot;, &quot;poster&quot;: &quot;media/reel/first-fight.jpg&quot;, &quot;label&quot;: &quot;Floor 1 \u00b7 The first fight&quot;}, {&quot;src&quot;: &quot;media/reel/desk.mp4&quot;, &quot;poster&quot;: &quot;media/reel/desk.jpg&quot;, &quot;label&quot;: &quot;Floor 5 \u00b7 The Maintenance Chief&quot;}, {&quot;src&quot;: &quot;media/reel/clinic.mp4&quot;, &quot;poster&quot;: &quot;media/reel/clinic.jpg&quot;, &quot;label&quot;: &quot;Floor 24 \u00b7 Keep the hand or redraw&quot;}, {&quot;src&quot;: &quot;media/reel/widow.mp4&quot;, &quot;poster&quot;: &quot;media/reel/widow.jpg&quot;, &quot;label&quot;: &quot;Floor 25 \u00b7 The Winter Widow&quot;}, {&quot;src&quot;: &quot;media/reel/homura.mp4&quot;, &quot;poster&quot;: &quot;media/reel/homura.jpg&quot;, &quot;label&quot;: &quot;Floor 30 \u00b7 Homura&quot;}, {&quot;src&quot;: &quot;media/reel/residences.mp4&quot;, &quot;poster&quot;: &quot;media/reel/residences.jpg&quot;, &quot;label&quot;: &quot;Floor 50 \u00b7 The tower core&quot;}, {&quot;src&quot;: &quot;media/reel/gala.mp4&quot;, &quot;poster&quot;: &quot;media/reel/gala.jpg&quot;, &quot;label&quot;: &quot;Floor 93 \u00b7 The Gala&quot;}, {&quot;src&quot;: &quot;media/reel/ink-kick.mp4&quot;, &quot;poster&quot;: &quot;media/reel/ink-kick.jpg&quot;, &quot;label&quot;: &quot;Rin&#x27;s Ultimate&quot;}]"><div class="reel-screen"><video muted playsinline preload="metadata" poster="media/reel/first-fight.jpg" src="media/reel/first-fight.mp4"></video><span class="reel-live">Development footage</span></div><div class="reel-bar"><button type="button" class="reel-prev" aria-label="Previous clip">&lsaquo;</button><p class="reel-label">Floor 1 · The first fight</p><div class="reel-dots"><button type="button" data-i="0" aria-label="Floor 1 · The first fight"></button><button type="button" data-i="1" aria-label="Floor 5 · The Maintenance Chief"></button><button type="button" data-i="2" aria-label="Floor 24 · Keep the hand or redraw"></button><button type="button" data-i="3" aria-label="Floor 25 · The Winter Widow"></button><button type="button" data-i="4" aria-label="Floor 30 · Homura"></button><button type="button" data-i="5" aria-label="Floor 50 · The tower core"></button><button type="button" data-i="6" aria-label="Floor 93 · The Gala"></button><button type="button" data-i="7" aria-label="Rin&#x27;s Ultimate"></button></div><button type="button" class="reel-next" aria-label="Next clip">&rsaquo;</button></div></div>
     <p style="margin-top:26px"><a class="more-link" href="media.html">All the videos</a></p>
+  </div>
+</section>
+
+<section class="band signup-band" id="signup">
+  <div class="wrap split">
+    <div>
+      <p class="eyebrow">Launch list</p>
+      <h2>Be told when the doors open</h2>
+      <p class="lead" style="margin-top:20px">Leave an email and say which phone you play on. You get one message when the beta opens for your phone, and one on launch day. Nothing else.</p>
+    </div>
+    <div><form class="signup" action="https://app.kit.com/forms/10202332/subscriptions" method="post" target="_blank" novalidate><div class="signup-row"><label class="sr" for="su-email">Email address</label><input id="su-email" type="email" name="email_address" placeholder="you@example.com" autocomplete="email" required><button class="btn red" type="submit"><span>Notify me</span></button></div><fieldset class="signup-phone"><legend>I play on</legend><label class="pick"><input type="radio" name="tags[]" value="25999112" required><span>iPhone</span></label><label class="pick"><input type="radio" name="tags[]" value="25999113" required><span>Android</span></label></fieldset><p class="signup-note">One email when the beta opens and one at launch. We will send a confirmation email first; unsubscribe any time.</p><p class="signup-msg" role="status" aria-live="polite" hidden></p></form></div>
   </div>
 </section>
 
@@ -161,11 +173,11 @@
   <div class="foot-in">
     <img src="media/img/logo.png" alt="" class="foot-logo">
     <p>Cut Cut Cut: 100 Floors of Zombies. An isometric sword game for iPhone, in development.</p>
-    <nav><a href="game.html">The Game</a><a href="making.html">How It&#x27;s Made</a><a href="media.html">Media</a><a href="timeline.html">Timeline</a><a href="devlog/index.html">Dev Log</a><a href="feed.xml">RSS</a></nav>
+    <nav><a href="game.html">The Game</a><a href="making.html">How It&#x27;s Made</a><a href="media.html">Media</a><a href="timeline.html">Timeline</a><a href="devlog/index.html">Dev Log</a><a href="index.html#signup">Get notified</a><a href="feed.xml">RSS</a></nav>
     <p class="small">The residents prefer the term "undying". Rin does not. &copy; 2026 Pondd. Game art and footage are work in progress.</p>
   </div>
 </footer>
 <div class="lightbox" hidden><button aria-label="Close">&times;</button><img alt=""></div>
-<script src="site.js?v=1f9637e4" defer></script>
+<script src="site.js?v=5f62878d" defer></script>
 </body>
 </html>

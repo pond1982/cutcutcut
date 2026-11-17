@@ -48,6 +48,16 @@ nothing here contains its source or its licensed assets, only web-sized pictures
 - To show it on the Media page, add it to `content/media.json`.
 - The home page's rotating reel plays the clips listed under `"reel"` in `content/media.json`, in order. Each is a short silent cut made by a `clip <name> <source video> <start> <length>` line at the end of `tools/prep-media.sh` (files in `docs/media/reel`). The owner wants real game footage there, not the intro short.
 
+## The launch list (sign-up)
+
+`{{signup}}` in a page draws the sign-up box: an email and a choice of iPhone or Android. It posts to the owner's Kit
+(kit.com) form named in `content/site.json` under `"signup"`: `action` is the form's address
+(`https://app.kit.com/forms/<form id>/subscriptions`) and each device's `tag` is a Kit tag id. `static/site.js` sends
+it without leaving the page; without scripts the form posts itself in a new tab. Kit sends the confirmation email
+(the form's own setting in Kit: keep it on), so nobody is on the list until they click it. It is on the home page,
+under the reel, and at the foot of The Game. To move to another provider, export the list from Kit as CSV and change
+`action` and the field names in `build.py`.
+
 ## Where things are
 
 | Path | What |

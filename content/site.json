@@ -4,10 +4,43 @@
   "owner": "Pondd",
   "url": "https://pond1982.github.io/cutcutcut",
   "nav": [
-    { "id": "game", "label": "The Game", "href": "game.html" },
-    { "id": "making", "label": "How It's Made", "href": "making.html" },
-    { "id": "media", "label": "Media", "href": "media.html" },
-    { "id": "timeline", "label": "Timeline", "href": "timeline.html" },
-    { "id": "devlog", "label": "Dev Log", "href": "devlog/index.html" }
-  ]
+    {
+      "id": "game",
+      "label": "The Game",
+      "href": "game.html"
+    },
+    {
+      "id": "making",
+      "label": "How It's Made",
+      "href": "making.html"
+    },
+    {
+      "id": "media",
+      "label": "Media",
+      "href": "media.html"
+    },
+    {
+      "id": "timeline",
+      "label": "Timeline",
+      "href": "timeline.html"
+    },
+    {
+      "id": "devlog",
+      "label": "Dev Log",
+      "href": "devlog/index.html"
+    }
+  ],
+  "signup": {
+    "action": "https://app.kit.com/forms/10202332/subscriptions",
+    "devices": [
+      {
+        "label": "iPhone",
+        "tag": 25999112
+      },
+      {
+        "label": "Android",
+        "tag": 25999113
+      }
+    ]
+  }
 }

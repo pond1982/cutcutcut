@@ -211,6 +211,28 @@ a.zoom { display: block; cursor: zoom-in; }
 .foot nav a { font: 700 0.98rem/1 var(--display); letter-spacing: 0.1em; text-transform: uppercase; text-decoration: none; color: var(--paper-dim); }
 .foot p { margin: 0; color: var(--paper-dim); } .foot .small { font-size: 0.84rem; color: var(--paper-low); }
 
+/* ---- the launch list sign-up ---- */
+.signup-band { background: linear-gradient(180deg, #170b10, var(--ink)); border-top: 4px solid var(--red); }
+.signup { background: var(--ink-2); border: 3px solid #000; outline: 1px solid var(--line); box-shadow: 8px 8px 0 var(--red-deep); border-radius: var(--radius); padding: 26px; display: grid; gap: 16px; }
+.signup-row { display: flex; gap: 12px; flex-wrap: wrap; align-items: stretch; }
+.signup input[type=email] { flex: 1 1 220px; min-width: 0; font: 500 1.05rem/1.2 var(--body); color: var(--paper); background: var(--ink); border: 2px solid var(--line); border-radius: var(--radius); padding: 14px 16px; }
+.signup input[type=email]::placeholder { color: var(--paper-low); }
+.signup input[type=email]:focus-visible, .signup .pick input:focus-visible + span { outline: 3px solid var(--gold); outline-offset: 2px; }
+.signup button { cursor: pointer; font-family: var(--display); }
+.signup button[disabled] { opacity: 0.6; cursor: progress; }
+.signup-phone { border: 0; margin: 0; padding: 0; display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+.signup-phone legend { float: left; margin-right: 6px; padding: 0; font: 700 1rem/1 var(--display); letter-spacing: 0.14em; text-transform: uppercase; color: var(--paper-dim); }
+.signup .pick { position: relative; cursor: pointer; }
+.signup .pick input { position: absolute; opacity: 0; inset: 0; margin: 0; cursor: pointer; }
+.signup .pick span { display: inline-block; font: 700 1.05rem/1 var(--display); letter-spacing: 0.1em; text-transform: uppercase; padding: 11px 18px 10px; border: 2px solid var(--line); border-radius: var(--radius); color: var(--paper-dim); }
+.signup .pick input:checked + span { border-color: var(--gold); color: var(--ink); background: var(--gold); }
+.signup-note { margin: 0; font-size: 0.9rem; color: var(--paper-low); }
+.signup-msg { margin: 0; font-weight: 600; padding: 12px 14px; border-radius: var(--radius); border: 1px solid var(--line); }
+.signup-msg[hidden] { display: none; }
+.signup-msg.ok { color: #0d1a05; background: var(--sap); border-color: var(--sap); }
+.signup-msg.bad { color: #fff; background: var(--red-deep); border-color: var(--red); }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
 /* ---- lightbox ---- */
 .lightbox { position: fixed; inset: 0; z-index: 90; background: rgba(4,3,6,0.94); display: grid; place-items: center; padding: 24px; cursor: zoom-out; }
 .lightbox[hidden] { display: none; }

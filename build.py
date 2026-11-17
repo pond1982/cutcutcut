@@ -183,7 +183,7 @@ def layout(title, description, body, root="", page="", body_class="", og=None):
   <div class="foot-in">
     <img src="{root}media/img/logo.png" alt="" class="foot-logo">
     <p>{esc(SITE['name'])}: {esc(SITE['tagline'])}. An isometric sword game for iPhone, in development.</p>
-    <nav>{nav}<a href="{root}feed.xml">RSS</a></nav>
+    <nav>{nav}<a href="{root}index.html#signup">Get notified</a><a href="{root}feed.xml">RSS</a></nav>
     <p class="small">The residents prefer the term "undying". Rin does not. &copy; {datetime.date.today().year} {esc(SITE['owner'])}. Game art and footage are work in progress.</p>
   </div>
 </footer>
@@ -240,6 +240,19 @@ def blocks(root, posts):
                      f'src="{root}media/reel/{clips[0]["name"]}.mp4"></video><span class="reel-live">Development footage</span></div>'
                      f'<div class="reel-bar"><button type="button" class="reel-prev" aria-label="Previous clip">&lsaquo;</button><p class="reel-label">{esc(clips[0]["label"])}</p>'
                      f'<div class="reel-dots">{dots}</div><button type="button" class="reel-next" aria-label="Next clip">&rsaquo;</button></div></div>')
+    # the launch list: an email and a choice of phone, sent to the Kit form named in site.json (site.js posts it and
+    # shows the answer in place; without scripts the form posts itself and Kit shows its own page). The phone is a Kit
+    # tag. Kit sends the confirmation email: nobody is on the list until they have clicked it.
+    su = SITE.get("signup")
+    if su:
+        radios = "".join(f'<label class="pick"><input type="radio" name="tags[]" value="{d["tag"]}" required><span>{esc(d["label"])}</span></label>' for d in su["devices"])
+        b["signup"] = (f'<form class="signup" action="{esc(su["action"])}" method="post" target="_blank" novalidate>'
+                       f'<div class="signup-row"><label class="sr" for="su-email">Email address</label>'
+                       f'<input id="su-email" type="email" name="email_address" placeholder="you@example.com" autocomplete="email" required>'
+                       f'<button class="btn red" type="submit"><span>Notify me</span></button></div>'
+                       f'<fieldset class="signup-phone"><legend>I play on</legend>{radios}</fieldset>'
+                       f'<p class="signup-note">One email when the beta opens and one at launch. We will send a confirmation email first; unsubscribe any time.</p>'
+                       f'<p class="signup-msg" role="status" aria-live="polite" hidden></p></form>')
     for key, vs in media["shelves"].items(): b["shelf_" + key] = shelf(vs)
     for key, names in media["galleries"].items(): b["gallery_" + key] = gallery(names, root)
     return b

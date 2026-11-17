@@ -45,6 +45,26 @@
       ask();
     }
   }
+  // The launch list: post the form to Kit without leaving the page and say what happened. If that request cannot be
+  // made at all, the form is sent the ordinary way, in a new tab, where Kit answers with its own page.
+  document.querySelectorAll("form.signup").forEach((f) => {
+    const msg = f.querySelector(".signup-msg"), btn = f.querySelector("button"), email = f.querySelector("input[type=email]");
+    const say = (text, ok) => { msg.textContent = text; msg.className = "signup-msg " + (ok ? "ok" : "bad"); msg.hidden = false; };
+    f.addEventListener("submit", (e) => {
+      e.preventDefault();
+      if (!email.value.trim() || !email.checkValidity()) { say("Please enter a valid email address.", false); email.focus(); return; }
+      if (!f.querySelector("input[type=radio]:checked")) { say("Please choose iPhone or Android.", false); return; }
+      btn.disabled = true;
+      fetch(f.action, { method: "POST", body: new FormData(f), headers: { Accept: "application/json" } })
+        .then((r) => r.json().catch(() => ({})).then((d) => ({ r, d })))
+        .then(({ r, d }) => {
+          if (r.ok && d.status !== "failed") { say("Almost there: check your inbox and click the link to confirm.", true); f.reset(); }
+          else say("That did not go through. Please check the address and try again.", false);
+        })
+        .catch(() => { f.submit(); })
+        .finally(() => { btn.disabled = false; });
+    });
+  });
   const vids = [...document.querySelectorAll("video")].filter((x) => !x.closest(".reel-player"));
   vids.forEach((v) => v.addEventListener("play", () => vids.forEach((o) => { if (o !== v) o.pause(); })));
 })();
