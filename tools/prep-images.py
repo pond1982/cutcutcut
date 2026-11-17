@@ -22,6 +22,7 @@ def quad(src, names):  # a 2 x 2 sheet of portraits -> four squares
 # key art
 full("backdrop", "Art/UI/title_backdrop.png")
 full("keyart", "Art/Title/option1-tower.png")
+full("hero-rin", "Art/Title/hero-rin-left.png", maxw=1920)  # the home page's landing backdrop: the tower, Rin at the left, no lettering
 for i, n in enumerate(["blade", "panels", "ink", "office"], 2): full("title-option-" + n, f"Art/Title/option{i}-{n}.png", maxw=1400)
 logo = Image.open(os.path.join(G, "Art/UI/title_logo.png")); logo.save(os.path.join(OUT, "logo.png"), optimize=True)
 for n in ["dawn", "arrival"]: full("garden-" + n, f"Art/UI/Finale/garden_{n}.png")
