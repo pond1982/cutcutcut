@@ -246,13 +246,16 @@ def blocks(root, posts):
     su = SITE.get("signup")
     if su:
         radios = "".join(f'<label class="pick"><input type="radio" name="tags[]" value="{d["tag"]}" required><span>{esc(d["label"])}</span></label>' for d in su["devices"])
-        b["signup"] = (f'<form class="signup" action="{esc(su["action"])}" method="post" target="_blank" novalidate>'
-                       f'<div class="signup-row"><label class="sr" for="su-email">Email address</label>'
-                       f'<input id="su-email" type="email" name="email_address" placeholder="you@example.com" autocomplete="email" required>'
-                       f'<button class="btn red" type="submit"><span>Notify me</span></button></div>'
-                       f'<fieldset class="signup-phone"><legend>I play on</legend>{radios}</fieldset>'
-                       f'<p class="signup-note">One email when the beta opens and one at launch. We will send a confirmation email first; unsubscribe any time.</p>'
-                       f'<p class="signup-msg" role="status" aria-live="polite" hidden></p></form>')
+        def signup(cls, key):
+            return (f'<form class="signup {cls}" action="{esc(su["action"])}" method="post" target="_blank" novalidate>'
+                    f'<div class="signup-row"><label class="sr" for="su-email-{key}">Email address</label>'
+                    f'<input id="su-email-{key}" type="email" name="email_address" placeholder="you@example.com" autocomplete="email" required>'
+                    f'<button class="btn red" type="submit"><span>Notify me</span></button></div>'
+                    f'<fieldset class="signup-phone"><legend>I play on</legend>{radios}</fieldset>'
+                    f'<p class="signup-note">One email when the beta opens and one at launch. We will send a confirmation email first; unsubscribe any time.</p>'
+                    f'<p class="signup-msg" role="status" aria-live="polite" hidden></p></form>')
+        b["signup"] = signup("", "page")
+        b["signup_hero"] = signup("in-hero", "hero")  # (the same form, slimmer, for the top of the home page)
     for key, vs in media["shelves"].items(): b["shelf_" + key] = shelf(vs)
     for key, names in media["galleries"].items(): b["gallery_" + key] = gallery(names, root)
     return b
