@@ -37,6 +37,7 @@ vid amagiri              "$G/Saved/Showcase/amagiri.mp4" 5
 vid balance-playthrough  "$G/Docs/Shots/Horai-Balance-Playthrough.mp4" 60 29
 vid showcase-thai        "$G/Docs/Shots/Horai-Showcase-Thai.mp4" 100 29
 vid dev-update-thai      "$G/Docs/Shots/Horai-Dev-Update-TH.mp4" 150 29
+vid dev-update-day5      "$G/Saved/DevUpdate/CutCutCut-DevUpdate-Day5.mp4" 1 29
 du -sh "$OUT"
 
 # ---- the home page's rotating reel: short silent clips of real play, cut from the videos above ----

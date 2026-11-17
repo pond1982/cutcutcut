@@ -183,7 +183,7 @@ def layout(title, description, body, root="", page="", body_class="", og=None):
   <div class="foot-in">
     <img src="{root}media/img/logo.png" alt="" class="foot-logo">
     <p>{esc(SITE['name'])}: {esc(SITE['tagline'])}. An isometric sword game for iPhone, in development.</p>
-    <nav>{nav}<a href="{root}index.html#signup">Get notified</a><a href="{root}feed.xml">RSS</a></nav>
+    <nav>{nav}<a href="{root}index.html#signup">Get notified</a><a href="{root}feed.xml">RSS</a>{f'<a href="{esc(SITE["youtube"])}" rel="me">YouTube</a>' if SITE.get("youtube") else ""}</nav>
     <p class="small">The residents prefer the term "undying". Rin does not. &copy; {datetime.date.today().year} {esc(SITE['owner'])}. Game art and footage are work in progress.</p>
   </div>
 </footer>

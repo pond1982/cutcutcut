@@ -2,6 +2,13 @@
   "shelves": {
     "featured": [
       {
+        "name": "dev-update-day5",
+        "portrait": true,
+        "date": "2026-11-17",
+        "title": "Dev update, Day 5",
+        "text": "Under two minutes on what the game is, where it stands and how one person and an AI agent are building it. Also on [YouTube](https://youtube.com/shorts/DVNdS7_Ij2o). [The post](devlog/a-dev-update-you-can-watch.html)."
+      },
+      {
         "name": "intro",
         "portrait": true,
         "date": "2026-11-17",
