@@ -28,7 +28,22 @@
     v.addEventListener("ended", () => show(i + 1, true));
     dots[0].classList.add("on");
     if (still) v.controls = true; // no motion unless asked for
-    else new IntersectionObserver(([e]) => { seen = e.isIntersecting; if (seen) v.play().catch(() => {}); else v.pause(); }, { threshold: 0.35 }).observe(reel);
+    else {
+      // Play only while a good part of the player is on screen. Checked on scroll, on resize and whenever a clip
+      // becomes ready, because an observer alone sometimes misses the first jump to the section.
+      let queued = false;
+      const sync = () => {
+        queued = false;
+        const r = reel.getBoundingClientRect(), vis = Math.min(r.bottom, innerHeight) - Math.max(r.top, 0);
+        seen = vis > 0.35 * r.height;
+        if (seen && v.paused) v.play().catch(() => {}); else if (!seen && !v.paused) v.pause();
+      };
+      const ask = () => { if (!queued) { queued = true; requestAnimationFrame(sync); } };
+      addEventListener("scroll", ask, { passive: true }); addEventListener("resize", ask); addEventListener("load", ask);
+      v.addEventListener("canplay", ask);
+      new IntersectionObserver(ask, { threshold: [0, 0.35, 0.7] }).observe(reel);
+      ask();
+    }
   }
   const vids = [...document.querySelectorAll("video")].filter((x) => !x.closest(".reel-player"));
   vids.forEach((v) => v.addEventListener("play", () => vids.forEach((o) => { if (o !== v) o.pause(); })));
