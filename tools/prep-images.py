@@ -48,6 +48,10 @@ for name, src in [
     ("shot-falcifer-arena", "Docs/Shots/falcifer_arena_overview.png"), ("shot-falcifer-arena-fight", "Docs/Shots/falcifer_arena_fight.png"),
     ("shot-office-zombie", "Docs/Shots/office_worker_zombie.png"), ("shot-elbow-study", "Docs/Shots/Boss-Elbow-Study.png"), ("shot-icon-options", "Docs/Shots/Horai-Icon-Options.jpg"),
 ]: full(name, src)
+# the cast as photographs (made with Seedream on JanaArt from the ink portraits; kept in the game's Saved/EndCredits/photos)
+for n in ["1-rin", "2-hana", "3-homura", "4-winter-widow"]:
+    src = "Saved/EndCredits/photos/" + n + ".png"
+    if os.path.exists(os.path.join(G, src)): full("photo-" + n[2:], src)
 # favicon and social card
 rin = Image.open(os.path.join(G, "Art/UI/rin_portrait.png")).convert("RGB")
 rin.resize((180, 180), Image.LANCZOS).save(os.path.join(OUT, "icon-180.png")); rin.resize((48, 48), Image.LANCZOS).save(os.path.join(OUT, "icon-48.png"))
