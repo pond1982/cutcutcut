@@ -46,6 +46,7 @@ nothing here contains its source or its licensed assets, only web-sized pictures
 - Picture: add it to `tools/prep-images.py`, then `~/VoxCPM/.venv/bin/python -I tools/prep-images.py`
   (that Python has Pillow; the system one does not).
 - To show it on the Media page, add it to `content/media.json`.
+- The home page's rotating reel plays the clips listed under `"reel"` in `content/media.json`, in order. Each is a short silent cut made by a `clip <name> <source video> <start> <length>` line at the end of `tools/prep-media.sh` (files in `docs/media/reel`). The owner wants real game footage there, not the intro short.
 
 ## Where things are
 

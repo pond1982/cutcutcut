@@ -33,3 +33,21 @@ vid balance-playthrough  "$G/Docs/Shots/Horai-Balance-Playthrough.mp4" 60 29
 vid showcase-thai        "$G/Docs/Shots/Horai-Showcase-Thai.mp4" 100 29
 vid dev-update-thai      "$G/Docs/Shots/Horai-Dev-Update-TH.mp4" 150 29
 du -sh "$OUT"
+
+# ---- the home page's rotating reel: short silent clips of real play, cut from the videos above ----
+REEL="$OUT/../reel"; mkdir -p "$REEL"
+clip() { # name, source name (in $OUT), start (s), length (s)
+  if [ ! -f "$REEL/$1.mp4" ] || [ "${FORCE:-0}" = 1 ]; then
+    ffmpeg -loglevel error -y -ss "$3" -t "$4" -i "$OUT/$2.mp4" -an -vf "scale=1280:-2" -c:v libx264 -preset slow -crf 27 -pix_fmt yuv420p -movflags +faststart "$REEL/$1.mp4"
+  fi
+  ffmpeg -loglevel error -y -ss 1 -i "$REEL/$1.mp4" -frames:v 1 -q:v 5 "$REEL/$1.jpg"
+  echo "reel $1 $(du -h "$REEL/$1.mp4" | cut -f1)"
+}
+clip first-fight   first-fight         5   8
+clip ink-kick      ultimate-ink-kick   1.5 9
+clip widow         winter-widow        11  8
+clip homura        homura-duel-1       27  8
+clip desk          balance-playthrough 20  7
+clip clinic        balance-playthrough 62  7
+clip residences    balance-playthrough 105 7
+clip gala          balance-playthrough 185 7

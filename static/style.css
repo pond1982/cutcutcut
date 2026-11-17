@@ -81,6 +81,21 @@ figcaption { font-size: 0.9rem; color: var(--paper-dim); padding: 10px 14px; bac
 .paper figcaption { color: #cfc6b6; }
 a.zoom { display: block; cursor: zoom-in; }
 
+/* ---- the home page's rotating reel of real play ---- */
+.reel-band { padding-top: 70px; background: linear-gradient(180deg, var(--ink), #0f1424 60%, var(--ink)); }
+.reel-player { border: 3px solid #000; outline: 1px solid var(--line); box-shadow: 12px 12px 0 var(--red-deep); background: #000; border-radius: var(--radius); overflow: hidden; }
+.reel-screen { position: relative; aspect-ratio: 16 / 9; background: #000; }
+.reel-screen video { width: 100%; height: 100%; object-fit: contain; }
+.reel-live { position: absolute; left: 14px; top: 14px; font: 700 0.86rem/1 var(--display); letter-spacing: 0.2em; text-transform: uppercase; color: #fff; background: var(--red); padding: 6px 10px 5px; transform: skewX(-9deg); }
+.reel-bar { display: grid; grid-template-columns: auto 1fr auto auto; gap: 16px; align-items: center; padding: 12px 14px; background: var(--ink-2); border-top: 1px solid var(--line); }
+.reel-label { margin: 0; font: italic 800 1.35rem/1.1 var(--display); text-transform: uppercase; letter-spacing: 0.03em; }
+.reel-prev, .reel-next { width: 42px; height: 42px; background: none; border: 2px solid var(--paper-low); color: var(--paper); font-size: 26px; line-height: 1; cursor: pointer; transform: skewX(-9deg); }
+.reel-prev:hover, .reel-next:hover { background: var(--red); border-color: var(--red); }
+.reel-dots { display: flex; gap: 7px; }
+.reel-dots button { width: 26px; height: 6px; padding: 0; border: 0; background: var(--line); cursor: pointer; transform: skewX(-30deg); }
+.reel-dots button.on { background: var(--red); }
+@media (max-width: 720px) { .reel-bar { grid-template-columns: auto 1fr auto; } .reel-dots { display: none; } .reel-label { font-size: 1.1rem; } .reel-player { box-shadow: 6px 6px 0 var(--red-deep); } }
+
 /* ---- facts row ---- */
 .facts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border: 1px solid var(--line); background: var(--ink-2); }
 .facts div { padding: 26px 24px; border-right: 1px solid var(--line); }

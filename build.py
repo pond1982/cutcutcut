@@ -219,6 +219,15 @@ def blocks(root, posts):
         "timeline_short": tl(timeline[-2:]),
         "post_count": str(len(posts)),
     }
+    # the rotating reel of real play: one silent video element that site.js feeds the clips to, one after another
+    clips = media.get("reel", [])
+    if clips:
+        dots = "".join(f'<button type="button" data-i="{i}" aria-label="{esc(c["label"])}"></button>' for i, c in enumerate(clips))
+        data = esc(json.dumps([{"src": f'{root}media/reel/{c["name"]}.mp4', "poster": f'{root}media/reel/{c["name"]}.jpg', "label": c["label"]} for c in clips]))
+        b["reel"] = (f'<div class="reel-player" data-clips="{data}"><div class="reel-screen"><video muted playsinline preload="metadata" poster="{root}media/reel/{clips[0]["name"]}.jpg" '
+                     f'src="{root}media/reel/{clips[0]["name"]}.mp4"></video><span class="reel-live">Development footage</span></div>'
+                     f'<div class="reel-bar"><button type="button" class="reel-prev" aria-label="Previous clip">&lsaquo;</button><p class="reel-label">{esc(clips[0]["label"])}</p>'
+                     f'<div class="reel-dots">{dots}</div><button type="button" class="reel-next" aria-label="Next clip">&rsaquo;</button></div></div>')
     for key, vs in media["shelves"].items(): b["shelf_" + key] = shelf(vs)
     for key, names in media["galleries"].items(): b["gallery_" + key] = gallery(names, root)
     return b

@@ -165,5 +165,39 @@
       "photo-homura",
       "photo-winter-widow"
     ]
-  }
+  },
+  "reel": [
+    {
+      "name": "first-fight",
+      "label": "Floor 1 · The first fight"
+    },
+    {
+      "name": "desk",
+      "label": "Floor 5 · The Maintenance Chief"
+    },
+    {
+      "name": "clinic",
+      "label": "Floor 24 · Keep the hand or redraw"
+    },
+    {
+      "name": "widow",
+      "label": "Floor 25 · The Winter Widow"
+    },
+    {
+      "name": "homura",
+      "label": "Floor 30 · Homura"
+    },
+    {
+      "name": "residences",
+      "label": "Floor 50 · The tower core"
+    },
+    {
+      "name": "gala",
+      "label": "Floor 93 · The Gala"
+    },
+    {
+      "name": "ink-kick",
+      "label": "Rin's Ultimate"
+    }
+  ]
 }
