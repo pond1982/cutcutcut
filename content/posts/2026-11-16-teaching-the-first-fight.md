@@ -4,7 +4,7 @@ date: 2026-11-16
 time: 17:46
 summary: Five clerks meet Rin in the lobby and the fight pauses while you try each move once: a slash, a combo, a roll, the Ultimate. Then the first card choice.
 cover: first-fight
-tags: Tutorial, iPhone, Day 4
+tags: Tutorial, iPhone
 ---
 > I want the first room of CUT/CUT/CUT to teach you how to survive the next 99.
 

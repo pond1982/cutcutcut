@@ -4,7 +4,7 @@ date: 2026-11-17
 time: 00:26
 summary: Six of sixteen guardians were stand-ins on borrowed bodies. The Maintenance Chief and the Clinic's night nurse are the first two to be properly cast.
 cover: winter-widow
-tags: Bosses, Characters, Day 5
+tags: Bosses, Characters
 ---
 ## The Maintenance Chief
 

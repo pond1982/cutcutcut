@@ -4,7 +4,7 @@ date: 2026-11-13
 time: 23:13
 summary: The idea on the first night was small enough to finish: an isometric crawl up an office tower full of zombies. It was playable before midnight.
 cover: shot-office-zombie
-tags: Concept, Unreal Engine, Day 1
+tags: Concept, Unreal Engine
 ---
 The working title was **Samurai Fight Fight**, and the pitch fitted in one line: a lone samurai fights up a high-rise during a zombie outbreak, room by room.
 
@@ -20,7 +20,7 @@ That last decision was made in the first hour and it has shaped everything since
 
 ## The same night
 
-Ten minutes after the first commit, the placeholder samurai was replaced by the ronin girl who became **Rin**. By 23:58 the floors had furniture with physics: desks and chairs that block you, and that get knocked across the room when a fight goes through them.
+Ten minutes after the first commit, the placeholder samurai was replaced by the ronin girl who became **Rin**. Before midnight the floors had furniture with physics: desks and chairs that block you, and that get knocked across the room when a fight goes through them.
 
 ## What it was not yet
 

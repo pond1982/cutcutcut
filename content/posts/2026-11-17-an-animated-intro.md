@@ -4,7 +4,7 @@ date: 2026-11-17
 time: 13:40
 summary: Seventy seconds that explain the premise, drawn as a cartoon and told in Rin's own dry voice. It also settled what Rin sounds like in the game.
 cover: intro
-tags: Video, Voice, Day 5
+tags: Video, Voice
 ---
 ::video intro | The intro. 70 seconds, vertical. | portrait
 

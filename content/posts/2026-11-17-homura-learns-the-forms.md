@@ -4,7 +4,7 @@ date: 2026-11-17
 time: 12:55
 summary: The Expedition's duellist now fights with eight real sword forms across three duels that get faster and harder. She escapes the first two. Her blade glows red.
 cover: homura-duel-1
-tags: Bosses, Combat, Day 5
+tags: Bosses, Combat
 ---
 Homura wants Rin's sword, because her own thermal blade only cauterises the undying. She meets Rin three times: floors 30, 65 and 100.
 

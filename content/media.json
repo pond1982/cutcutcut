@@ -4,14 +4,14 @@
       {
         "name": "intro",
         "portrait": true,
-        "date": "17 November 2026",
+        "date": "2026-11-17",
         "title": "The intro, told by Rin",
         "text": "Seventy seconds on why a hundred floors of people who cannot die are filing complaints about a woman with a sword. Drawn with three.js and Remotion, narrated in Rin's voice. [How it was made](devlog/an-animated-intro.html)."
       },
       {
         "name": "campaign-showcase",
         "wide": true,
-        "date": "16 November 2026",
+        "date": "2026-11-16",
         "title": "The campaign showcase",
         "text": "The tower from the Desk to the rooftop garden in 84 seconds: the sections, the guardians, the deck and the two endings. [The post](devlog/the-whole-tower.html)."
       }
@@ -19,20 +19,20 @@
     "play": [
       {
         "name": "first-fight",
-        "date": "16 November 2026",
+        "date": "2026-11-16",
         "title": "The first fight and the card hand",
         "text": "The first room teaches the next 99: a slash, a combo, a roll through a swing, and the katana kicked across the room. Then the first card choice."
       },
       {
         "name": "ultimate-ink-kick",
-        "date": "16 November 2026",
+        "date": "2026-11-16",
         "title": "Rin's Ultimate: the ink kick",
         "text": "She kicks the blade, it cuts the room, and the last stroke lands in darkness."
       },
       {
         "name": "balance-playthrough",
         "wide": true,
-        "date": "16 November 2026",
+        "date": "2026-11-16",
         "title": "Start to credits",
         "text": "A full automated climb in landscape, filmed after the whole-tower balance pass: every section, every guardian, both rooftop choices, the credits. Nearly four minutes."
       }
@@ -40,37 +40,37 @@
     "bosses": [
       {
         "name": "winter-widow",
-        "date": "17 November 2026",
+        "date": "2026-11-17",
         "title": "The Winter Widow",
         "text": "The Clinic's night nurse fights in rounds: circling, feints, a dashing ice lunge, and frost that freezes Rin where she stands."
       },
       {
         "name": "homura-duel-1",
-        "date": "17 November 2026",
+        "date": "2026-11-17",
         "title": "Homura, first duel (floor 30)",
         "text": "The Captain's eight forms on a cyborg with a red blade. She does not die here: the finishing cut is turned aside and she leaves."
       },
       {
         "name": "homura-duel-2",
-        "date": "17 November 2026",
+        "date": "2026-11-17",
         "title": "Homura, second duel (floor 65)",
         "text": "Faster, closer and harder-hitting than the first."
       },
       {
         "name": "homura-forms",
-        "date": "17 November 2026",
+        "date": "2026-11-17",
         "title": "Homura: all eight forms",
         "text": "Falling Mountain, Three Steps, Swallow's Return, Still Water, One Flash, Tempest, Secret Art, Heaven and Earth."
       },
       {
         "name": "winter-widow-frost",
-        "date": "17 November 2026",
+        "date": "2026-11-17",
         "title": "Frost prescription",
         "text": "Ice at range, a step ahead of where Rin is going. Get caught and the cold compress follows."
       },
       {
         "name": "winter-widow-rounds",
-        "date": "17 November 2026",
+        "date": "2026-11-17",
         "title": "Rounds",
         "text": "Between attacks she circles and stops to watch. The opening is after the backflip."
       }
@@ -78,19 +78,19 @@
     "studies": [
       {
         "name": "kick-facing",
-        "date": "16 November 2026",
+        "date": "2026-11-16",
         "title": "Keeping Rin facing her kick",
         "text": "A fix film: she now holds her facing through the landing."
       },
       {
         "name": "ink-kick-study",
-        "date": "16 November 2026",
+        "date": "2026-11-16",
         "title": "Ink kick motion study",
         "text": "The first pass at the move, before the darkness and the grounded blood."
       },
       {
         "name": "nurse-first-try",
-        "date": "16 November 2026",
+        "date": "2026-11-16",
         "title": "The nurse we did not keep",
         "text": "A zombie nurse model on shared zombie clips. Her arms twisted, so the Winter Widow took the ward instead."
       }
@@ -98,13 +98,13 @@
     "thai": [
       {
         "name": "showcase-thai",
-        "date": "16 November 2026",
+        "date": "2026-11-16",
         "title": "Showcase, narrated in Thai",
         "text": "The landscape showcase with a Thai voiceover and synced subtitles, voiced with ElevenLabs v4."
       },
       {
         "name": "dev-update-thai",
-        "date": "16 November 2026",
+        "date": "2026-11-16",
         "title": "Developer update in Thai",
         "text": "The same film told as a developer update in Pondd's own (cloned) voice, made for the Thai AI Dev community."
       }

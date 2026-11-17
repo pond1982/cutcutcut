@@ -4,7 +4,7 @@ date: 2026-11-17
 time: 14:20
 summary: For the end credits we want the people of the tower as if they were real. Four portraits have been turned into photographs, plus one of Rin mid-cut.
 cover: photo-rin
-tags: Art, Credits, Day 5
+tags: Art, Credits
 ---
 The game's portraits are ink drawings. For the end credits we wanted something else: the cast as if a film had been made, and these were its stills.
 

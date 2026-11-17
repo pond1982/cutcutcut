@@ -4,7 +4,7 @@ date: 2026-11-14
 time: 21:28
 summary: The first floor stopped being a test room. It got staff, a PA system, drops, a boss with a title card, and the thick-ink comic look the whole game now wears.
 cover: shot-falcifer-intro
-tags: Art direction, Bosses, Day 2
+tags: Art direction, Bosses
 ---
 A room full of enemies is a test. A level has people in it who were doing something before you walked in.
 

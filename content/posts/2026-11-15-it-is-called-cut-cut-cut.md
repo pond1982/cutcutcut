@@ -4,7 +4,7 @@ date: 2026-11-15
 time: 11:02
 summary: The game got its real name, a title screen, a reason for the tower, a running joke about the word "zombie", and a plan that runs all the way to release.
 cover: keyart
-tags: Name, Story, Roadmap, Day 3
+tags: Name, Story, Roadmap
 ---
 ## The name
 

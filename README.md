@@ -68,6 +68,6 @@ repository's Settings, Pages, choose "Deploy from a branch", branch `main`, fold
 
 ## Rules for the writing
 
-- Every date and time on the site is real: taken from the game's commit history or an actual upload.
+- The site shows "Day 1", "Day 2" and so on, never calendar dates or clock times (the owner asked for this). Day 1 is 13 November 2026; `build.py` works the day out from each post's `date`, which must still be the real date. `time` only orders posts within a day.
 - Say what was not checked as plainly as what was.
 - Do not give away the ending.

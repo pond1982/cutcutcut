@@ -24,7 +24,13 @@ MONTHS = "January February March April May June July August September October No
 
 
 def esc(s): return html.escape(str(s), quote=True)
-def nice_date(d): y, m, dd = (int(x) for x in d.split("-")); return f"{dd} {MONTHS[m - 1]} {y}"
+DAY_ONE = datetime.date(2026, 11, 13)  # the first night of the project
+
+
+def nice_date(d):
+    """The site counts in days of work, not calendar dates: 2026-11-13 is "Day 1"."""
+    y, m, dd = (int(x) for x in d.split("-"))
+    return f"Day {(datetime.date(y, m, dd) - DAY_ONE).days + 1}"
 
 
 # ---------------------------------------------------------------- media blocks
@@ -194,15 +200,15 @@ def blocks(root, posts):
     def tl(items):
         rows = []
         for day in items:
-            ev = "".join(f'<li><span class="when">{esc(e.get("time", ""))}</span><div><strong>{inline(e["title"], root)}</strong>'
+            ev = "".join(f'<li><div><strong>{inline(e["title"], root)}</strong>'
                          + (f'<p>{inline(e["text"], root)}</p>' if e.get("text") else "")
                          + (f'<a class="more" href="{root}{e["link"]}">{esc(e.get("link_text", "Read the post"))}</a>' if e.get("link") else "") + "</div></li>" for e in day["events"])
-            rows.append(f'<section class="day"><header><span class="stamp">{esc(day["label"])}</span><h2>{nice_date(day["date"])}</h2><p>{inline(day["summary"], root)}</p></header><ol>{ev}</ol></section>')
+            rows.append(f'<section class="day"><header><h2>{nice_date(day["date"])}</h2><span class="stamp">{esc(day["label"])}</span><p>{inline(day["summary"], root)}</p></header><ol>{ev}</ol></section>')
         return '<div class="timeline">' + "".join(rows) + "</div>"
     def shelf(vs):
         return '<div class="shelf">' + "".join(
             f'<article class="{"wide " if v.get("wide") else ""}{"tall " if v.get("portrait") else ""}reel">{video(v["name"], "", v.get("portrait", False), root)}'
-            f'<div><time>{esc(v["date"])}</time><h3>{esc(v["title"])}</h3><p>{inline(v["text"], root)}</p></div></article>' for v in vs) + "</div>"
+            f'<div><time>{nice_date(v["date"])}</time><h3>{esc(v["title"])}</h3><p>{inline(v["text"], root)}</p></div></article>' for v in vs) + "</div>"
     b = {
         "latest_posts": '<div class="cards">' + "".join(post_card(p, root) for p in posts[:3]) + "</div>",
         "all_posts": '<div class="cards">' + "".join(post_card(p, root) for p in posts) + "</div>",
@@ -253,7 +259,7 @@ def main():
             + (f'<a class="newer" href="{newer["slug"]}.html"><span>Later</span>{esc(newer["title"])}</a>' if newer else "<span></span>") + "</nav>"
         body = (f'<article class="post"><header class="post-head"><a class="back" href="index.html">Dev log</a>'
                 f'<h1>{esc(p["title"])}</h1><p class="lede">{esc(p["summary"])}</p>'
-                f'<div class="meta"><time datetime="{p["date"]}">{nice_date(p["date"])}</time>{"<span>" + esc(p["time"]) + "</span>" if p.get("time") else ""}<div class="tags">{tags}</div></div></header>'
+                f'<div class="meta"><time datetime="{p["date"]}">{nice_date(p["date"])}</time><div class="tags">{tags}</div></div></header>'
                 f'<div class="prose">{md(p["body"], "../")}</div>{nav}</article>')
         cover = p.get("cover")
         og = None

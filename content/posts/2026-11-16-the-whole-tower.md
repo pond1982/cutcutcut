@@ -4,7 +4,7 @@ date: 2026-11-16
 time: 00:15
 summary: Fifteen minutes past midnight the climb was playable from the lobby to the rooftop garden, with a choice at the core, two endings and an endless mode. Then it was balanced.
 cover: campaign-showcase
-tags: Milestone, Campaign, Day 4
+tags: Milestone, Campaign
 ---
 ::video campaign-showcase | The campaign showcase: 84 seconds from the Desk to the garden.
 
@@ -24,7 +24,7 @@ The game can climb itself. Scripted climbs ran to both endings from saved loadou
 
 ## The balance pass
 
-By 09:21 the full climb had been balanced and every guardian had its own fight. The start-to-credits film below is one automated climb after that pass.
+By the morning the full climb had been balanced and every guardian had its own fight. The start-to-credits film below is one automated climb after that pass.
 
 ::video balance-playthrough | Start to credits in landscape, after the balance pass.
 

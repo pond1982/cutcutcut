@@ -2,11 +2,11 @@
 title: Build 0.1 is on TestFlight
 date: 2026-11-17
 time: 08:34
-summary: The first build reached Apple's testing service this morning. It is one tester for now: the developer, on a new phone.
+summary: The first build reached Apple's testing service. It is one tester for now: the developer, on a new phone.
 cover: shot-iphone-compare
-tags: iPhone, TestFlight, Day 5
+tags: iPhone, TestFlight
 ---
-At 08:34 the upload finished with two words: *Upload succeeded.*
+The upload finished with two words: *Upload succeeded.*
 
 ## What it took
 
