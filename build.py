@@ -169,7 +169,9 @@ def layout(title, description, body, root="", page="", body_class="", og=None):
 <body class="{body_class}">
 <a class="skip" href="#main">Skip to content</a>
 <header class="top">
-  <a class="brand" href="{root}index.html" aria-label="{esc(SITE['name'])} home"><img src="{root}media/img/logo.png" alt="{esc(SITE['name'])}"></a>
+  <div class="brand-welcome"><a class="brand" href="{root}index.html" aria-label="{esc(SITE['name'])} home"><img src="{root}media/img/logo.png" alt="{esc(SITE['name'])}"></a>
+    <div class="visitor-tag"><span>Welcome, you are visitor number <strong>001,337</strong></span><small>Fictional counter · just for fun</small></div>
+  </div>
   <button class="menu" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
   <nav class="nav">{nav}</nav>
 </header>

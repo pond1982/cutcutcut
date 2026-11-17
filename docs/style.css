@@ -237,3 +237,15 @@ a.zoom { display: block; cursor: zoom-in; }
 
 /* Shared creator collection, scoped to preserve the game layout. */
 .pondd-about{background:#14121a;color:#f2e8d5;margin-top:32px}.pondd-about h2{font:700 30px/1.2 system-ui;text-transform:none}.pondd-about a{color:#e0b24a}.pondd-about p{font:16px/1.6 system-ui}.pondd-character-hint{color:#b9b0a2}
+
+/* A deliberately fictional retro visitor tag: no tracking or external counter. */
+.brand-welcome{display:flex;align-items:center;gap:16px;min-width:0}
+.brand-welcome .brand{flex-shrink:0}
+.visitor-tag{max-width:185px;border-left:2px solid var(--red);padding-left:12px;color:var(--paper-dim);font:500 10px/1.4 var(--body)}
+.visitor-tag strong{display:block;font:700 19px/1.2 ui-monospace,monospace;color:var(--gold);letter-spacing:.12em}
+.visitor-tag small{display:block;margin-top:3px;font-size:9px;color:var(--paper-low)}
+@media(max-width:980px){.top{gap:10px}.brand-welcome{gap:10px}.visitor-tag{max-width:160px}}
+@media(max-width:420px){.top{padding:10px 12px}.brand img{height:30px}.brand-welcome{gap:8px}.visitor-tag{max-width:137px;padding-left:8px;font-size:9px}.visitor-tag strong{font-size:16px}.visitor-tag small{font-size:8px}}
+
+/* Keep the punchline on its own unbroken line. */
+.hero h1 em{display:block;white-space:nowrap}
