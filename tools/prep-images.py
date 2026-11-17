@@ -49,7 +49,7 @@ for name, src in [
     ("shot-office-zombie", "Docs/Shots/office_worker_zombie.png"), ("shot-elbow-study", "Docs/Shots/Boss-Elbow-Study.png"), ("shot-icon-options", "Docs/Shots/Horai-Icon-Options.jpg"),
 ]: full(name, src)
 # the cast as photographs (made with Seedream on JanaArt from the ink portraits; kept in the game's Saved/EndCredits/photos)
-for n in ["1-rin", "2-hana", "3-homura", "4-winter-widow"]:
+for n in ["1-rin", "2-hana", "3-homura", "4-winter-widow", "6-rin-cut"]:
     src = "Saved/EndCredits/photos/" + n + ".png"
     if os.path.exists(os.path.join(G, src)): full("photo-" + n[2:], src)
 # favicon and social card
