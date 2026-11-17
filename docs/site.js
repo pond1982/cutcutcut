@@ -58,7 +58,14 @@
       fetch(f.action, { method: "POST", body: new FormData(f), headers: { Accept: "application/json" } })
         .then((r) => r.json().catch(() => ({})).then((d) => ({ r, d })))
         .then(({ r, d }) => {
-          if (r.ok && d.status !== "failed") { say("Almost there: check your inbox and click the link to confirm.", true); f.reset(); }
+          if (r.ok && d.status !== "failed") {
+            // The form gives way to the next step: where to look and what to press.
+            const done = f.querySelector(".signup-done");
+            if (!done) { say("Almost there: check your inbox and click the link to confirm.", true); f.reset(); return; }
+            done.querySelector(".signup-done-to").textContent = email.value.trim();
+            msg.hidden = true; f.classList.add("is-done"); done.hidden = false; f.reset();
+            done.querySelector(".signup-again").onclick = () => { f.classList.remove("is-done"); done.hidden = true; email.focus(); };
+          }
           else say("That did not go through. Please check the address and try again.", false);
         })
         .catch(() => { f.submit(); })

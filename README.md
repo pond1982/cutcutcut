@@ -58,6 +58,11 @@ it without leaving the page; without scripts the form posts itself in a new tab.
 under the reel, and at the foot of The Game. To move to another provider, export the list from Kit as CSV and change
 `action` and the field names in `build.py`.
 
+After a sign-up `static/site.js` swaps the form for the `signup-done` panel ("One more cut": open the email, press
+confirm). `content/pages/welcome.html` is the page for people who have confirmed: it is not in the menu or the sitemap,
+and Kit has to be told to send them there (in Kit: the form's settings, the redirect after confirming, set to
+`<site>/welcome.html`). Until that is set, Kit shows its own plain page.
+
 ## Where things are
 
 | Path | What |

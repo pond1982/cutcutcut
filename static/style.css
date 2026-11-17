@@ -294,3 +294,41 @@ a.zoom { display: block; cursor: zoom-in; }
 
 /* Keep the punchline on its own unbroken line. */
 .hero h1 em{display:block;white-space:nowrap}
+
+/* After signing up: the form gives way to the next step, in the game's dress. */
+.signup.is-done > :not(.signup-done) { display: none; }
+.signup-done[hidden] { display: none; }
+.signup-done { display: grid; gap: 12px; }
+.signup-done-logo { width: min(240px, 70%); margin-left: -4px; filter: drop-shadow(0 6px 16px rgba(0,0,0,0.6)); }
+.signup.in-hero .signup-done-logo { display: none; } /* (the big logo is already just above it) */
+.signup-done-head { margin: 0; font: 800 2rem/1 var(--display); font-style: italic; text-transform: uppercase; letter-spacing: 0.04em; color: var(--red); }
+.signup-done-lead { margin: 0; font-size: 1.05rem; color: var(--paper); }
+.signup-done-steps { margin: 4px 0 0; padding: 0; list-style: none; counter-reset: step; display: grid; gap: 10px; }
+.signup-done-steps li { counter-increment: step; position: relative; padding: 2px 0 2px 46px; color: #e9dfcd; }
+.signup-done-steps li::before { content: counter(step); position: absolute; left: 0; top: 0; width: 32px; height: 32px; display: grid; place-items: center;
+  font: 800 1.1rem/1 var(--display); color: var(--ink); background: var(--gold); transform: skewX(-9deg); }
+.signup-done-to { color: #fff; overflow-wrap: anywhere; }
+.signup-again { background: none; border: 0; padding: 0; font: inherit; color: var(--paper-dim); text-decoration: underline; text-decoration-color: var(--red); text-underline-offset: 3px; cursor: pointer; }
+.signup-again:hover { color: #fff; }
+
+/* The welcome page: where Kit sends people once they have confirmed. */
+.welcome-hero { position: relative; min-height: min(78vh, 760px); display: grid; align-items: center; overflow: hidden; isolation: isolate; }
+.welcome-hero .bg { position: absolute; inset: 0; z-index: -2; background: #0a0d18 left bottom / cover no-repeat; }
+.welcome-hero::after { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, rgba(11,10,15,0) 0%, rgba(11,10,15,0.15) 30%, rgba(11,10,15,0.84) 54%, rgba(11,10,15,0.92) 100%),
+  linear-gradient(180deg, rgba(11,10,15,0) 70%, var(--ink) 100%); }
+.welcome-in { max-width: 1500px; margin: 0 auto; width: 100%; padding: 40px 32px; display: flex; justify-content: flex-end; }
+.welcome-text { width: min(600px, 46%); }
+.welcome-text .hero-logo { width: min(360px, 100%); margin: 0 0 10px -6px; }
+.welcome-stamp { display: inline-block; font: 800 1rem/1 var(--display); letter-spacing: 0.22em; text-transform: uppercase; color: var(--ink); background: var(--sap); padding: 8px 14px 7px; transform: skewX(-9deg) rotate(-2deg); margin: 0 0 16px; }
+.welcome-text h1 { font-size: clamp(2rem, 3.4vw, 3.2rem); text-shadow: 0 3px 0 #000; margin: 0 0 14px; }
+.welcome-text h1 em { font-style: inherit; color: var(--red); }
+.welcome-text p.sub { color: #e9dfcd; font-size: 1.08rem; margin: 0 0 22px; text-shadow: 0 1px 12px #000; }
+.welcome-next { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.welcome-next div { background: var(--ink-2); border: 3px solid #000; outline: 1px solid var(--line); box-shadow: 6px 6px 0 var(--red-deep); border-radius: var(--radius); padding: 20px; }
+.welcome-next b { display: block; font: 800 1.25rem/1.1 var(--display); text-transform: uppercase; letter-spacing: 0.05em; color: var(--gold); margin-bottom: 8px; }
+.welcome-next p { margin: 0; color: var(--paper-dim); }
+@media (max-width: 860px) {
+  .welcome-hero::after { background: linear-gradient(180deg, rgba(11,10,15,0.35) 0%, rgba(11,10,15,0.88) 55%, var(--ink) 100%); }
+  .welcome-in { justify-content: flex-start; padding: 32px 20px; } .welcome-text { width: 100%; }
+  .welcome-next { grid-template-columns: 1fr; }
+}

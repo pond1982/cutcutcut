@@ -253,7 +253,17 @@ def blocks(root, posts):
                     f'<button class="btn red" type="submit"><span>Notify me</span></button></div>'
                     f'<fieldset class="signup-phone"><legend>I play on</legend>{radios}</fieldset>'
                     f'<p class="signup-note">One email when the beta opens and one at launch. We will send a confirmation email first; unsubscribe any time.</p>'
-                    f'<p class="signup-msg" role="status" aria-live="polite" hidden></p></form>')
+                    f'<p class="signup-msg" role="status" aria-live="polite" hidden></p>'
+                    # (what site.js shows in the form's place once Kit has taken the address: the next step, in the
+                    # game's own dress, instead of one line of text)
+                    f'<div class="signup-done" role="status" aria-live="polite" hidden>'
+                    f'<img class="signup-done-logo" src="{root}media/img/logo.png" alt="{esc(SITE["name"])}">'
+                    f'<p class="signup-done-head">One more cut</p>'
+                    f'<p class="signup-done-lead">Your name is at the front desk. Confirm it and you are on the list.</p>'
+                    f'<ol class="signup-done-steps"><li>Open the email we just sent to <b class="signup-done-to">your inbox</b>.</li>'
+                    f'<li>Press the confirm button in it.</li><li>That is all. We write when the beta opens, and again at launch.</li></ol>'
+                    f'<p class="signup-note">Nothing in a few minutes? Look in Spam or Promotions. <button type="button" class="signup-again">Use a different address</button></p>'
+                    f'</div></form>')
         b["signup"] = signup("", "page")
         b["signup_hero"] = signup("in-hero", "hero")  # (the same form, slimmer, for the top of the home page)
     for key, vs in media["shelves"].items(): b["shelf_" + key] = shelf(vs)
@@ -310,7 +320,7 @@ def main():
                     f"<pubDate>{datetime.datetime.strptime(p['sort'], '%Y-%m-%d %H:%M').strftime('%a, %d %b %Y %H:%M:00 +0700')}</pubDate><description>{esc(p['summary'])}</description></item>" for p in posts)
     write("feed.xml", f'<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>{esc(SITE["name"])} dev log</title><link>{base}/</link>'
                       f'<description>{esc(SITE["tagline"])}</description>{items}</channel></rss>')
-    urls = [f"{base}/{f.stem}.html" for f in (C / "pages").glob("*.html") if f.stem not in ("devlog", "404")] + [f"{base}/devlog/"] + [f"{base}/devlog/{p['slug']}.html" for p in posts]
+    urls = [f"{base}/{f.stem}.html" for f in (C / "pages").glob("*.html") if f.stem not in ("devlog", "404", "welcome")] + [f"{base}/devlog/"] + [f"{base}/devlog/{p['slug']}.html" for p in posts]
     write("sitemap.xml", '<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + "".join(f"<url><loc>{u}</loc></url>" for u in urls) + "</urlset>")
     # every local link and media file a page points at must exist
     missing = set()
