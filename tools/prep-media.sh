@@ -29,6 +29,11 @@ vid nurse-first-try      "$G/Saved/Showcase/orderly-nurse.mp4" 12
 vid homura-duel-1        "$G/Saved/Homura-Duel-1-Floor-30.mp4" 30
 vid homura-duel-2        "$G/Saved/Homura-Duel-2-Floor-65.mp4" 25
 vid homura-forms         "$G/Saved/Homura-All-Forms-Floor-65.mp4" 15
+vid chair                "$G/Saved/Showcase/chair.mp4" 12
+vid conductor            "$G/Saved/Showcase/conductor.mp4" 22
+vid porter               "$G/Saved/Showcase/porter.mp4" 9
+vid pacer                "$G/Saved/Showcase/pacer.mp4" 6
+vid amagiri              "$G/Saved/Showcase/amagiri.mp4" 5
 vid balance-playthrough  "$G/Docs/Shots/Horai-Balance-Playthrough.mp4" 60 29
 vid showcase-thai        "$G/Docs/Shots/Horai-Showcase-Thai.mp4" 100 29
 vid dev-update-thai      "$G/Docs/Shots/Horai-Dev-Update-TH.mp4" 150 29

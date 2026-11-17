@@ -183,6 +183,12 @@
         "time": "14:40",
         "title": "This site goes up",
         "text": "The dev log starts here."
+      },
+      {
+        "time": "19:40",
+        "title": "No more stand-ins",
+        "text": "The Chair, the Conductor, the Freight Porter and the Pacer get bodies and fights of their own, and the founder gets a face.",
+        "link": "devlog/no-more-stand-ins.html"
       }
     ]
   }

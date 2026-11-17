@@ -49,6 +49,8 @@ for name, src in [
     ("shot-falcifer-arena", "Docs/Shots/falcifer_arena_overview.png"), ("shot-falcifer-arena-fight", "Docs/Shots/falcifer_arena_fight.png"),
     ("shot-office-zombie", "Docs/Shots/office_worker_zombie.png"), ("shot-elbow-study", "Docs/Shots/Boss-Elbow-Study.png"), ("shot-icon-options", "Docs/Shots/Horai-Icon-Options.jpg"),
 ]: full(name, src)
+# the drawings three guardians were modelled from (made with the image tool; turned into 3D models in Tripo)
+for n in ["porter", "pacer", "amagiri"]: full("ref-" + n, f"Art/{n.capitalize()}/{n}_reference_front.png", maxw=900)
 # the cast as photographs (made with Seedream on JanaArt from the ink portraits; kept in the game's Saved/EndCredits/photos)
 for n in ["1-rin", "2-hana", "3-homura", "4-winter-widow", "6-rin-cut"]:
     src = "Saved/EndCredits/photos/" + n + ".png"
