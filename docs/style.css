@@ -234,3 +234,6 @@ a.zoom { display: block; cursor: zoom-in; }
   .post-nav { grid-template-columns: 1fr; } .post-nav .newer { text-align: left; }
 }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } }
+
+/* Shared creator collection, scoped to preserve the game layout. */
+.pondd-about{background:#14121a;color:#f2e8d5;margin-top:32px}.pondd-about h2{font:700 30px/1.2 system-ui;text-transform:none}.pondd-about a{color:#e0b24a}.pondd-about p{font:16px/1.6 system-ui}.pondd-character-hint{color:#b9b0a2}

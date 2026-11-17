@@ -162,6 +162,9 @@ def layout(title, description, body, root="", page="", body_class="", og=None):
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;1,800;1,900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{root}style.css?v={stamp("style.css")}">
+<link rel="stylesheet" href="{root}pondd-character/character.css">
+<script type="importmap">{{"imports":{{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}}}</script>
+<script type="module" src="{root}pondd-character/init.js"></script>
 </head>
 <body class="{body_class}">
 <a class="skip" href="#main">Skip to content</a>
@@ -173,6 +176,7 @@ def layout(title, description, body, root="", page="", body_class="", og=None):
 <main id="main">
 {body}
 </main>
+{(ROOT / "content/collection.html").read_text()}
 <footer class="foot">
   <div class="foot-in">
     <img src="{root}media/img/logo.png" alt="" class="foot-logo">
@@ -251,7 +255,9 @@ def fill(text, root, posts):
 
 def main():
     OUT.mkdir(exist_ok=True)
-    for f in (ROOT / "static").iterdir(): shutil.copy(f, OUT / f.name)
+    for f in (ROOT / "static").iterdir():
+        if f.is_dir(): shutil.copytree(f, OUT / f.name, dirs_exist_ok=True)
+        else: shutil.copy(f, OUT / f.name)
     (OUT / ".nojekyll").write_text("")
     posts = load_posts()
     # fixed pages
