@@ -13,7 +13,7 @@ Only the Python standard library is used. What it reads:
   static/                  style.css, site.js (copied as they are)
 Media (docs/media) is made by tools/prep-media.sh and tools/prep-images.py and is not touched here.
 """
-import html, json, os, re, shutil, datetime
+import hashlib, html, json, os, re, shutil, datetime
 from pathlib import Path
 
 ROOT = Path(__file__).parent
@@ -24,6 +24,12 @@ MONTHS = "January February March April May June July August September October No
 
 
 def esc(s): return html.escape(str(s), quote=True)
+
+
+def stamp(name):
+    """A short fingerprint of a static file, added to its address (style.css?v=...), so browsers fetch the new one
+    when it changes instead of showing new pages with an old cached stylesheet."""
+    return hashlib.sha1((ROOT / "static" / name).read_bytes()).hexdigest()[:8]
 DAY_ONE = datetime.date(2026, 11, 13)  # the first night of the project
 
 
@@ -155,7 +161,7 @@ def layout(title, description, body, root="", page="", body_class="", og=None):
 <link rel="alternate" type="application/rss+xml" title="{esc(SITE['name'])} dev log" href="{root}feed.xml">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;1,800;1,900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="{root}style.css">
+<link rel="stylesheet" href="{root}style.css?v={stamp("style.css")}">
 </head>
 <body class="{body_class}">
 <a class="skip" href="#main">Skip to content</a>
@@ -176,7 +182,7 @@ def layout(title, description, body, root="", page="", body_class="", og=None):
   </div>
 </footer>
 <div class="lightbox" hidden><button aria-label="Close">&times;</button><img alt=""></div>
-<script src="{root}site.js" defer></script>
+<script src="{root}site.js?v={stamp("site.js")}" defer></script>
 </body>
 </html>
 """
@@ -288,7 +294,7 @@ def main():
         for m in re.finditer(r'(?:href|src|poster)="([^"#]+)"', f.read_text()):
             u = m.group(1)
             if re.match(r"^(https?:|mailto:|data:)", u): continue
-            if not (f.parent / u).resolve().exists(): missing.add(f"{f.relative_to(OUT)} -> {u}")
+            if not (f.parent / u.split("?")[0]).resolve().exists(): missing.add(f"{f.relative_to(OUT)} -> {u}")
     print(f"built {len(posts)} posts, {len(list(OUT.rglob('*.html')))} pages")
     if missing: print("MISSING:\n  " + "\n  ".join(sorted(missing)))
 
