@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rin&#x27;s deck: a poker hand is your power · Cut Cut Cut</title>
+<meta name="description" content="Upgrades are playing cards. Five are in play, and the poker hand they make decides what Rin can do. It was designed and playtested on paper before any code.">
+<meta property="og:title" content="Rin&#x27;s deck: a poker hand is your power · Cut Cut Cut">
+<meta property="og:description" content="Upgrades are playing cards. Five are in play, and the poker hand they make decides what Rin can do. It was designed and playtested on paper before any code.">
+<meta property="og:image" content="https://pond1982.github.io/cutcutcut/media/img/shot-card-deal.jpg">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../media/img/icon-48.png">
+<link rel="apple-touch-icon" href="../media/img/icon-180.png">
+<link rel="alternate" type="application/rss+xml" title="Cut Cut Cut dev log" href="../feed.xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;1,800;1,900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="page-post">
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <a class="brand" href="../index.html" aria-label="Cut Cut Cut home"><img src="../media/img/logo.png" alt="Cut Cut Cut"></a>
+  <button class="menu" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  <nav class="nav"><a href="../game.html">The Game</a><a href="../making.html">How It&#x27;s Made</a><a href="../media.html">Media</a><a href="../timeline.html">Timeline</a><a href="../devlog/index.html" aria-current="page">Dev Log</a></nav>
+</header>
+<main id="main">
+<article class="post"><header class="post-head"><a class="back" href="index.html">Dev log</a><h1>Rin&#x27;s deck: a poker hand is your power</h1><p class="lede">Upgrades are playing cards. Five are in play, and the poker hand they make decides what Rin can do. It was designed and playtested on paper before any code.</p><div class="meta"><time datetime="2026-11-15">15 November 2026</time><span>21:20</span><div class="tags"><span>Design</span><span>Cards</span><span>Day 3</span></div></div></header><div class="prose"><p>Most climbing games hand you three upgrades and ask you to pick one. We wanted the picking to be a game people already know.</p>
+<h2>How it works</h2>
+<ul><li>A new climb deals <strong>eight cards</strong> and equips <strong>five</strong>.</li><li>The <strong>poker rank</strong> of the five in play is Rin&#x27;s power. A pair does one thing. A straight flush does another.</li><li>On the stairs you may take a card into your reserve, or pass.</li><li>On every third cleared floor you compare, then <strong>keep the hand or change up to three cards</strong>.</li><li>Guardians give permanent techniques that survive every redraw.</li></ul>
+<figure class="shot"><a class="zoom" href="../media/img/shot-card-deal.jpg"><img loading="lazy" src="../media/img/shot-card-deal.jpg" alt="Choosing a card on the stairs. The hand it would make is shown before you commit."></a><figcaption>Choosing a card on the stairs. The hand it would make is shown before you commit.</figcaption></figure>
+<h2>Paper first</h2>
+<p>The deck was designed as a document and run as a simulated paper playtest before it was built. Later it was actually printed.</p>
+<figure class="shot"><a class="zoom" href="../media/img/shot-printed-deck.jpg"><img loading="lazy" src="../media/img/shot-printed-deck.jpg" alt="All 52 faces, assembled by script and printed."></a><figcaption>All 52 faces, assembled by script and printed.</figcaption></figure>
+<h2>The art</h2>
+<p>It is an engraved tower deck on aged ivory stock: ink black, oxidized brass and vermilion. Four suits of tower art, twelve court faces drawn from the cast, a reversible tower-and-blade back, and a field Joker that binds to one rank.</p>
+<div class="gallery"><figure class="tile"><a class="zoom" href="../media/img/card-court.jpg"><img loading="lazy" src="../media/img/card-court.jpg" alt="card-court"></a></figure><figure class="tile"><a class="zoom" href="../media/img/card-back.jpg"><img loading="lazy" src="../media/img/card-back.jpg" alt="card-back"></a></figure><figure class="tile"><a class="zoom" href="../media/img/field-joker.jpg"><img loading="lazy" src="../media/img/field-joker.jpg" alt="field-joker"></a></figure><figure class="tile"><a class="zoom" href="../media/img/shot-card-collection.jpg"><img loading="lazy" src="../media/img/shot-card-collection.jpg" alt="shot-card-collection"></a></figure></div>
+<h2>What the numbers said</h2>
+<p>When the whole climb was balanced the next morning, automated climbs compared two ways of playing the deck over 32 seeds each. Players who held strong hands changed cards about 3 times in a climb. Players who explored changed about 30 times. Both ended up with roughly four distinct powers. The open question for human testers: does keeping a strong hand stay an interesting decision?</p></div><nav class="post-nav"><a class="older" href="it-is-called-cut-cut-cut.html"><span>Earlier</span>It is called Cut Cut Cut</a><a class="newer" href="the-whole-tower.html"><span>Later</span>The whole tower: 100 floors, two endings, Endless</a></nav></article>
+</main>
+<footer class="foot">
+  <div class="foot-in">
+    <img src="../media/img/logo.png" alt="" class="foot-logo">
+    <p>Cut Cut Cut: 100 Floors of Zombies. An isometric sword game for iPhone, in development.</p>
+    <nav><a href="../game.html">The Game</a><a href="../making.html">How It&#x27;s Made</a><a href="../media.html">Media</a><a href="../timeline.html">Timeline</a><a href="../devlog/index.html" aria-current="page">Dev Log</a><a href="../feed.xml">RSS</a></nav>
+    <p class="small">The residents prefer the term "undying". Rin does not. &copy; 2026 Pondd. Game art and footage are work in progress.</p>
+  </div>
+</footer>
+<div class="lightbox" hidden><button aria-label="Close">&times;</button><img alt=""></div>
+<script src="../site.js" defer></script>
+</body>
+</html>

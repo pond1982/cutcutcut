@@ -1,0 +1,44 @@
+[
+  { "date": "2026-11-13", "label": "Day 1 · Concept", "summary": "The idea was small: a lone samurai, an office tower, one room after another. It was playable the same night under the working title *Samurai Fight Fight*.",
+    "events": [
+      { "time": "23:13", "title": "First playable", "text": "An isometric zombie tower crawl in Unreal Engine 5.8. No level file: the game builds each floor in code when you arrive.", "link": "devlog/first-playable.html" },
+      { "time": "23:23", "title": "The ronin girl becomes the main character", "text": "Rin replaces the placeholder samurai." },
+      { "time": "23:58", "title": "Furnished floors and furniture physics", "text": "Desks and chairs that get in the way and get knocked over, plus the first showcase and phone recording." }
+    ] },
+  { "date": "2026-11-14", "label": "Day 2 · A level, not a room", "summary": "Floor 1 stops being a test room and becomes a place with staff, a PA system, a boss and a comic-book look.",
+    "events": [
+      { "time": "21:28", "title": "Floor 1 as a full level", "text": "Falcifer's arena, staff zombies, PA announcements, drops, and the thick-ink comic look.", "link": "devlog/floor-one-becomes-a-level.html" },
+      { "time": "22:09", "title": "Rin's run follows her speed", "text": "Isometric furniture sets fill the rooms." }
+    ] },
+  { "date": "2026-11-15", "label": "Day 3 · The name and the tower", "summary": "The longest day. The game gets its real name, its running joke, its plan to release, and most of its hundred floors.",
+    "events": [
+      { "time": "00:48", "title": "The Clinic, floors 21 to 40", "text": "The stairwell, Hana's texts between floors, and a fall with a retry." },
+      { "time": "06:19", "title": "Homura, the rival blade", "text": "And a board of floors for jumping around the tower in testing." },
+      { "time": "09:27", "title": "Subject 001, the Clinic's Elder", "text": "Homura cuts into the fight on floor 30." },
+      { "time": "11:02", "title": "It is called Cut Cut Cut", "text": "The title screen, the Collector, a fighting style for each boss, and the z-word joke.", "link": "devlog/it-is-called-cut-cut-cut.html" },
+      { "time": "11:39", "title": "First boss moves to floor 5", "text": "Floors 1 to 4 stay plain so the rhythm builds before a guardian breaks it." },
+      { "time": "19:00", "title": "The Desk grows up", "text": "Progression, controls, encounters and environment passes for floors 1 to 20." },
+      { "time": "20:18", "title": "The Expedition arrives", "text": "Roaming squads, tech recovery rewards and localized lighting." },
+      { "time": "21:20", "title": "Rin's deck is designed on paper", "text": "A simulated paper playtest before any card code.", "link": "devlog/rins-deck.html" },
+      { "time": "22:28", "title": "The Residences", "text": "Floors 41 to 55, the maintenance chief, the Envoy's choice at the tower core, and the Chair of the Assembly." },
+      { "time": "23:48", "title": "The painted deck, the portraits and two garden endings" }
+    ] },
+  { "date": "2026-11-16", "label": "Day 4 · Floor 100", "summary": "The climb is finished end to end just after midnight, then balanced, filmed, narrated in Thai, taught to new players and packaged for Android.",
+    "events": [
+      { "time": "00:15", "title": "The whole climb is playable", "text": "Story, deck, two rooftop endings and Endless mode.", "link": "devlog/the-whole-tower.html" },
+      { "time": "00:43", "title": "Ophiel at the tower core", "text": "Every route to dawn verified by automated climbs." },
+      { "time": "09:21", "title": "The balance pass", "text": "The full climb balanced, and each guardian given a distinct fight." },
+      { "time": "09:50", "title": "The showcase, narrated in Thai", "text": "Voiceover and synced subtitles with ElevenLabs v4, then a developer update in Pondd's own voice.", "link": "devlog/showcase-in-thai.html" },
+      { "time": "15:24", "title": "Rin's Ultimate: the ink kick", "text": "She kicks the blade across the room. Filmed, then reworked twice the same afternoon.", "link": "devlog/the-ink-kick.html" },
+      { "time": "17:46", "title": "The first fight teaches the game", "text": "A sharper iPhone view and a first room that teaches slash, combo, roll and Ultimate.", "link": "devlog/teaching-the-first-fight.html" },
+      { "time": "20:44", "title": "Android landscape playtest", "text": "Packaged and optimized for a first Android test." }
+    ] },
+  { "date": "2026-11-17", "label": "Day 5 · Faces and first testers", "summary": "Stand-in bosses start getting bodies of their own, Homura learns real sword forms, the game reaches TestFlight, and Rin gets a voice.",
+    "events": [
+      { "time": "00:26", "title": "The Chief and the Winter Widow", "text": "Two guardians get their own bodies and, for the Widow, a designed fight.", "link": "devlog/two-guardians-get-bodies.html" },
+      { "time": "08:34", "title": "Build 0.1 uploaded to TestFlight", "text": "The first build on Apple's testing service.", "link": "devlog/on-testflight.html" },
+      { "time": "12:55", "title": "Homura fights as the Captain", "text": "Eight sword forms, three hardening duels, an escape and a red blade.", "link": "devlog/homura-learns-the-forms.html" },
+      { "time": "13:40", "title": "An animated intro, narrated by Rin", "text": "A 70 second cartoon of the premise. Rin's voice is chosen for the game.", "link": "devlog/an-animated-intro.html" },
+      { "time": "", "title": "This site goes up", "text": "The dev log starts here." }
+    ] }
+]

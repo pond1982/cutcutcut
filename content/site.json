@@ -1,0 +1,13 @@
+{
+  "name": "Cut Cut Cut",
+  "tagline": "100 Floors of Zombies",
+  "owner": "Pondd",
+  "url": "https://pond1982.github.io/cutcutcut",
+  "nav": [
+    { "id": "game", "label": "The Game", "href": "game.html" },
+    { "id": "making", "label": "How It's Made", "href": "making.html" },
+    { "id": "media", "label": "Media", "href": "media.html" },
+    { "id": "timeline", "label": "Timeline", "href": "timeline.html" },
+    { "id": "devlog", "label": "Dev Log", "href": "devlog/index.html" }
+  ]
+}

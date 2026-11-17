@@ -1,0 +1,110 @@
+<!-- How It's Made | How Cut Cut Cut is built: a tower generated in code, characters rigged by script, a game that plays itself, and an AI agent working beside one developer. -->
+<div class="page-head"><div class="wrap">
+  <p class="eyebrow">How it's made</p>
+  <h1>One developer, one AI agent, no level files</h1>
+  <p>Cut Cut Cut went from a late-night idea to a build on TestFlight in five days. This page is the technique: what the pipeline is, what the AI does and does not do, and what we got wrong.</p>
+</div></div>
+
+<section class="band">
+  <div class="wrap split">
+    <div>
+      <p class="eyebrow">The way of working</p>
+      <h2>The owner directs. The agent builds. The game checks.</h2>
+      <p class="lead" style="margin-top:20px">Pondd owns the game: the ideas, the taste, every decision. An AI coding agent (Claude Code) writes the C++, the Blender and Unreal scripts, the docs, and this site.</p>
+      <p>The loop is short. Pondd says what he wants, usually by voice. The agent builds it, compiles it, runs the game's own tests, films the result when asked, and reports what it did not verify. Pondd looks, says what is wrong ("the wrench is still not right", "she keeps running into nothing"), and the loop goes again.</p>
+      <p>Three rules keep it honest. Compile after every change. Never claim something was checked when it was not. Write everything down, so the next session, human or agent, can pick it up from the repository alone.</p>
+    </div>
+    <div>{{img shot-elbow-study | A model audit: does the right elbow actually bend the skin? Candidates are measured before they are cast.}}</div>
+  </div>
+</section>
+
+<section class="band night">
+  <div class="wrap">
+    <div class="head"><p class="eyebrow">The pipeline</p><h2>Eight techniques that carry the project</h2></div>
+    <div class="steps">
+      <div class="step"><h3>A tower built in code</h3>
+        <p>Unreal Engine 5.8, C++ only, and no map asset. One game mode class lays out every floor when Rin arrives: walls, doors, furniture with a clear path to each exit, lights, enemies, the guardian's room.</p>
+        <ul><li>Floors come from a seed, so a climb can be replayed exactly.</li><li>Each section has its own plan set, furniture kit and dress for the undying.</li></ul></div>
+      <div class="step"><h3>Characters rigged by script</h3>
+        <p>Nothing is imported by hand. A Blender script, run headless, takes a source model, gives it a skeleton or renames its bones, carries it onto one of the game's shared skeletons, and thins it for the phone. An Unreal script brings it in.</p>
+        <ul><li>One skeleton for Rin and the sword bosses, one for the zombies, so clips are shared.</li><li>Re-running the script rebuilds the character from source.</li></ul></div>
+      <div class="step"><h3>Existing models, credited</h3>
+        <p>Guardians are cast like actors from free and licensed models: the Maintenance Chief is Paul N's "Bubba The Handyman"; three Elders are DarkPaperVerse sculpts; the Winter Widow came from Pondd's other game, Ink &amp; Legend.</p>
+        <ul><li>We tried generating a human from scratch for the Chief. A ready-made model with character won.</li><li>Every source and licence is recorded for the credits.</li></ul></div>
+      <div class="step"><h3>Animation from text, where it works</h3>
+        <p>Some of Rin's on-the-spot moves were generated from a sentence, using Epic's experimental AnimGen plugins with NVIDIA's Kimodo motion model, running offline on a Mac.</p>
+        <ul><li>Good for a wind-up, a blade lock, a struggle, a taunt.</li><li>Bad at locomotion: every generated walk and run kept the hips still. Movement comes from real animation packs.</li></ul></div>
+      <div class="step"><h3>2D art in one ink language</h3>
+        <p>Portraits, title cards, the 52-card deck and the ending panels were made with an image model, art-directed to one look: graphic-novel ink, thick lines, strong silhouettes, a limited palette.</p>
+        <ul><li>The deck's letterforms, suit marks and borders are assembled by a script and printed to atlases.</li><li>It was playtested on paper, printed, before it was coded.</li></ul></div>
+      <div class="step"><h3>A game that plays itself</h3>
+        <p>A scripted player can climb the tower unattended. Automated tests check single fights (does the wrench hit, does a roll clear the second swing) and whole climbs to both endings.</p>
+        <ul><li>Balance was audited over dozens of seeded climbs per card policy.</li><li>The same harness films the game: every video on this site was captured by script.</li></ul></div>
+      <div class="step"><h3>Voices and sound</h3>
+        <p>Narration uses ElevenLabs. The Thai developer update is in Pondd's own cloned voice. Rin's English voice was chosen for the intro and its ID is recorded so the game uses the same one.</p>
+        <ul><li>The tower's section music and ending cues are generated from note-and-synthesis scripts.</li><li>The intro's score and effects are synthesized in code; nothing is sampled.</li></ul></div>
+      <div class="step"><h3>Everything written down</h3>
+        <p>The repository carries a handover document, a roadmap with release gates, the lore, a casting sheet for every boss, play audits, and a credits ledger. Comments in the code say why, in plain words.</p>
+        <ul><li>A new session starts by reading the handover, not by asking.</li><li>What was not verified is listed as carefully as what was.</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section class="band paper">
+  <div class="wrap split">
+    <div>
+      <p class="eyebrow">Worked example</p>
+      <h2>Casting the Maintenance Chief</h2>
+      <p class="lead" style="margin-top:20px">The floor-5 guardian was an ordinary zombie holding a wrench. He needed his own body.</p>
+      <p><strong>Attempt one:</strong> build a broad, older mechanic from an open human generator. It worked technically, and it looked like nobody.</p>
+      <p><strong>Attempt two:</strong> find an existing free model with character. Bubba The Handyman: denim overalls, plaid shirt, tool belt, cap. A script renamed his bones, cleared the animation that kept re-posing him, and carried him onto the zombie skeleton so he could play the clips the fight already used.</p>
+      <p><strong>Then the wrench.</strong> Attached at the wrist, it floated. The fix was to place it from his finger joints each frame, so it sits in the fist. It took three rounds of "that wrench is still not right" to get there.</p>
+      <p><a class="more-link" href="{root}devlog/two-guardians-get-bodies.html">The full post</a></p>
+    </div>
+    <div>{{img shot-floor5 | The Maintenance Chief's introduction card on floor 5.}}</div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap split flip">
+    <div>{{video winter-widow | The Winter Widow's designed fight: rounds, feints, the ice lunge, frost.}}</div>
+    <div>
+      <p class="eyebrow">Worked example</p>
+      <h2>Designing a fight on paper first</h2>
+      <p class="lead" style="margin-top:20px">The Winter Widow's first version chased Rin and swung. On film she "kept running into nothing".</p>
+      <p>So the fight was written as a pattern before it was coded: she circles in rounds and stops to watch; close in she feints, and only the real cut glints; she backflips away and the landing is your opening; at range she throws frost a step ahead of where you are going; get frozen and she walks up, unhurried, for a heavy cut.</p>
+      <p>Each beat has a warning the player can read and an opening the player earns. Then the automated test confirmed her first real cut lands and a roll clears the next.</p>
+    </div>
+  </div>
+</section>
+
+<section class="band night">
+  <div class="wrap">
+    <div class="head"><p class="eyebrow">Tools</p><h2>What is on the bench</h2></div>
+    <div class="tools">
+      <div><b>Unreal Engine 5.8</b><span>The game. C++ only, floors generated at run time, built for iPhone and Mac.</span></div>
+      <div><b>Claude Code</b><span>The AI agent that writes the code, scripts and docs alongside the owner.</span></div>
+      <div><b>Blender, headless</b><span>Rigging, retargeting and thinning models by script.</span></div>
+      <div><b>Unreal Python</b><span>Imports art and makes materials without opening the editor by hand.</span></div>
+      <div><b>AnimGen + Kimodo</b><span>Text-to-animation for on-the-spot moves, in a separate Unreal 5.9 lab project.</span></div>
+      <div><b>Image generation</b><span>Portraits, title cards, the deck and ending panels, in one ink style.</span></div>
+      <div><b>ElevenLabs</b><span>Rin's voice and the Thai narration.</span></div>
+      <div><b>three.js + Remotion</b><span>The animated intro short, rendered on the same Mac.</span></div>
+      <div><b>Xcode and TestFlight</b><span>Signing and getting builds onto real phones.</span></div>
+      <div><b>Git, with LFS</b><span>Every change committed with a plain-words message; large assets tracked separately.</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <div class="head"><p class="eyebrow">Honest notes</p><h2>What went wrong, so far</h2></div>
+    <div class="steps">
+      <div class="step"><h3>The nurse whose arms twisted</h3><p>A zombie nurse model looked right standing still. On the shared zombie clips her arms corkscrewed. She was replaced the same day rather than repaired.</p></div>
+      <div class="step"><h3>Rin does not run</h3><p>Every generated run clip came out with still legs. Rin's "run" is her sword-set walk at 1.6 times speed, and it reads fine in an isometric view.</p></div>
+      <div class="step"><h3>Checked is not the same as played</h3><p>A fight can pass every automated test and still feel wrong in the hand. Frame rate, touch comfort and an unassisted human climb are still open on the list.</p></div>
+      <div class="step"><h3>Four guardians are still stand-ins</h3><p>They borrow another character's body and add a prop. They are being replaced one at a time, starting with the ones whose arms cannot move at all.</p></div>
+    </div>
+    <div class="cta" style="margin-top:40px"><a class="btn red" href="{root}devlog/index.html"><span>Read the dev log</span></a><a class="btn" href="{root}timeline.html"><span>See the timeline</span></a></div>
+  </div>
+</section>
