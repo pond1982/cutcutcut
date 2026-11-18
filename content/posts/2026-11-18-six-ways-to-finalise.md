@@ -6,9 +6,7 @@ summary: This morning one boss had an ending of his own. By the afternoon every 
 cover: six-endings
 tags: Combat, Bosses, Video
 ---
-This morning's post ended with one guardian, the Freight Porter, getting an ending of his own. It was a lot of work for one boss out of fifteen. So the owner made a call that changed the plan:
-
-> Maybe we just have a few finish endings and rotate them at random.
+This morning's post ended with one guardian, the Freight Porter, getting an ending of his own. It was a lot of work for one boss out of fifteen. So the owner made a call that changed the plan: have a handful of endings and rotate them at random, instead of making one for each boss.
 
 That is what the game does now. Every guardian but one gets the finish call, and answering it in time deals one of six endings, never the same twice running.
 
@@ -35,14 +33,14 @@ It is the same voice that has been cancelling appointments since floor 1.
 
 ## What the owner's notes changed
 
-The ending went through a dozen takes today. The notes that shaped it:
+The ending went through a dozen takes today. The notes that shaped it, in short:
 
-- **"The camera view was blocked."** The overhead camera now comes down behind her shoulder for the call.
-- **"The text is blocking the view."** The title moved from the middle of the screen to a band across the top.
-- **"Why the camera shake?"** Because one had been added to every hit. They are gone.
-- **"He should fall upward."** In the air he is no longer a posed figure. He goes limp with gravity switched off and is pulled up by the hips, so his limbs trail.
-- **"More slow motion, but she moves fast."** The world drops to a twelfth of its speed. She alone keeps hers.
-- **"Too many camera cuts."** Nine shots in eight seconds became four shots and two cuts.
+- **The camera view was blocked.** The overhead camera now comes down behind her shoulder for the call.
+- **The title was blocking the view.** The title moved from the middle of the screen to a band across the top.
+- **Why does the camera shake?** Because one had been added to every hit. They are gone.
+- **He should fall, but upward.** In the air he is no longer a posed figure. He goes limp with gravity switched off and is pulled up by the hips, so his limbs trail.
+- **More slow motion, with her still fast.** The world drops to a twelfth of its speed. She alone keeps hers.
+- **Too many camera cuts.** Nine shots in eight seconds became four shots and two cuts.
 
 ## What has not been checked
 
