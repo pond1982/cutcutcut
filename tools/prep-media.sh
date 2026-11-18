@@ -38,6 +38,10 @@ vid balance-playthrough  "$G/Docs/Shots/Horai-Balance-Playthrough.mp4" 60 29
 vid showcase-thai        "$G/Docs/Shots/Horai-Showcase-Thai.mp4" 100 29
 vid dev-update-thai      "$G/Docs/Shots/Horai-Dev-Update-TH.mp4" 150 29
 vid dev-update-day5      "$G/Saved/DevUpdate/CutCutCut-DevUpdate-Day5.mp4" 1 29
+vid boss-cutscene        "$G/Saved/CutScene/CutCutCut-Bosses-CutScene.mp4" 58 30
+vid porter-finish        "$G/Saved/FinishCall/Porter-Own-Ending.mp4" 8
+vid roll-before-after    "$G/Saved/FeelCompare/Feel-Before-After.mp4" 3
+vid flick-before-after   "$G/Saved/FeelCompare/Flick-Roll-Before-After.mp4" 5
 du -sh "$OUT"
 
 # ---- the home page's rotating reel: short silent clips of real play, cut from the videos above ----

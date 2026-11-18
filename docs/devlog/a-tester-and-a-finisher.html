@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A tester, a finisher, and a build that was not there · Cut Cut Cut</title>
+<meta name="description" content="Yesterday&#x27;s TestFlight build never arrived, and this log said it had. Today it is really there, the first tester wrote back, and the Freight Porter got an ending of his own.">
+<meta property="og:title" content="A tester, a finisher, and a build that was not there · Cut Cut Cut">
+<meta property="og:description" content="Yesterday&#x27;s TestFlight build never arrived, and this log said it had. Today it is really there, the first tester wrote back, and the Freight Porter got an ending of his own.">
+<meta property="og:image" content="https://pond1982.github.io/cutcutcut/media/video/porter-finish.jpg">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../media/img/icon-48.png">
+<link rel="apple-touch-icon" href="../media/img/icon-180.png">
+<link rel="alternate" type="application/rss+xml" title="Cut Cut Cut dev log" href="../feed.xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;1,800;1,900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css?v=bdafa914">
+<link rel="stylesheet" href="../pondd-character/character.css">
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>
+<script type="module" src="../pondd-character/init.js"></script>
+</head>
+<body class="page-post">
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="brand-welcome"><a class="brand" href="../index.html" aria-label="Cut Cut Cut home"><img src="../media/img/logo.png" alt="Cut Cut Cut"></a>
+    <div class="visitor-tag"><span>Welcome, you are visitor number <strong>001,337</strong></span><small>Fictional counter · just for fun</small></div>
+  </div>
+  <button class="menu" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  <nav class="nav"><a href="../game.html">The Game</a><a href="../making.html">How It&#x27;s Made</a><a href="../media.html">Media</a><a href="../timeline.html">Timeline</a><a href="../devlog/index.html" aria-current="page">Dev Log</a></nav>
+</header>
+<main id="main">
+<article class="post"><header class="post-head"><a class="back" href="index.html">Dev log</a><h1>A tester, a finisher, and a build that was not there</h1><p class="lede">Yesterday&#x27;s TestFlight build never arrived, and this log said it had. Today it is really there, the first tester wrote back, and the Freight Porter got an ending of his own.</p><div class="meta"><time datetime="2026-11-18">Day 6</time><div class="tags"><span>TestFlight</span><span>Combat</span><span>Bosses</span><span>Video</span></div></div></header><div class="prose"><p>This log has a rule: say what broke. So, first, a correction.</p>
+<h2>The build that was not there</h2>
+<p>Yesterday&#x27;s post said build 0.1 was on TestFlight, because the upload ended with <em>Upload succeeded.</em> It was not. Apple accepted the file, then dropped it while processing it, and said so only in an email. App Store Connect just showed &quot;No Builds&quot;. The same thing happened to a second upload last night.</p>
+<p>The cause was small. The engine can reach the camera, the microphone and the motion sensors, and Apple will not take an app like that unless it says why. The game uses none of them, and now says so in three lines.</p>
+<p>The third upload is really there: Apple lists it as valid, and it was checked by asking Apple, not by trusting the uploader.</p>
+<blockquote><p>&quot;Upload succeeded&quot; means Apple received the file. It does not mean Apple kept it.</p></blockquote>
+<h2>A cut scene, with a voice</h2>
+<p>Before the tester woke up there was time for a video: six guardians and Rin&#x27;s ultimate, under two minutes, narrated in the developer&#x27;s cloned voice.</p>
+<figure class="video"><video controls preload="none" playsinline poster="../media/video/boss-cutscene.jpg"><source src="../media/video/boss-cutscene.mp4" type="video/mp4"></video><figcaption>Six guardians and the ultimate. Every fight is played by the game&#x27;s own bot.</figcaption></figure>
+<h2>The first tester writes back</h2>
+<p>Three notes, in Thai, from the first person to play who is not the developer:</p>
+<p>1. The roll should go further. 2. The cuts should flow more smoothly. 3. While holding to cut, a swipe of the same thumb should roll out of the way.</p>
+<p><strong>The roll</strong> went from 1.51 m to 2.02 m. The game measured it, and drew it on the floor for a side-by-side film: a red ring where the roll starts, a yellow one where it ends.</p>
+<figure class="video"><video controls preload="none" playsinline poster="../media/video/roll-before-after.jpg"><source src="../media/video/roll-before-after.mp4" type="video/mp4"></video><figcaption>Old on the left, new on the right. Then the same moves in slow motion.</figcaption></figure>
+<p><strong>The third note already existed</strong>, which is its own lesson. Holding to cut and flicking to roll worked, but once per press, and it was measured from where the thumb first landed. A thumb that had wandered could flick and get nothing. Now any quick flick rolls, as many times as you like, and she goes back to cutting on her own.</p>
+<figure class="video"><video controls preload="none" playsinline poster="../media/video/flick-before-after.jpg"><source src="../media/video/flick-before-after.mp4" type="video/mp4"></video><figcaption>The same scripted thumb on both sides: held down, then flicked four ways without lifting.</figcaption></figure>
+<p><strong>The second note</strong> is the least certain. A cut that follows another now blends in over longer. It may look smoother, or only softer. The real answer is in the animation, which is a bigger job.</p>
+<p>One phrase in the third note could be read two ways, so a question went back to the tester instead of a guess.</p>
+<h2>Finish him, but in our own words</h2>
+<p>Until today a guardian on its knees was finished with one tap and a move picked at random. The owner asked to try something bigger on one boss: the Freight Porter.</p>
+<p>Now his finish line is called, <strong>Unload the Last Case</strong>, the world slows, and four swipes are asked for against a clock. Miss it and he is put down plainly. Make it and you get his ending:</p>
+<ul><li>He drives the pole at Rin once more from his knees. She turns it aside.</li><li>A rising cut throws him into the air, limp, falling upward.</li><li>The world drops to a twelfth of its speed. Rin does not.</li><li>Thirteen cuts. Each one knocks him.</li><li>He comes apart at every joint at once.</li></ul>
+<figure class="video"><video controls preload="none" playsinline poster="../media/video/porter-finish.jpg"><source src="../media/video/porter-finish.mp4" type="video/mp4"></video><figcaption>The call, then the ending. Filmed from the game, played by its bot.</figcaption></figure>
+<p>It took several rounds to get here, and the owner&#x27;s notes did most of the work: the overhead camera was blocked by furniture, so it comes down behind her shoulder; the title covered the blow, so it moved to the top; the picture shook, because a shake had been added to every hit, so the shakes went; he hung in the air like a statue, so now he is a ragdoll with gravity switched off.</p>
+<h2>The stair moves</h2>
+<p>Watching those films showed something else: the way up stood inside the room, ran diagonally, and could be walked through. It now lies along a far wall, climbing into the far corner, square to the building and solid.</p>
+<h2>What has not been checked</h2>
+<ul><li>Nobody has played the finish call by hand. The swipes in the film are the bot&#x27;s, and four swipes in four seconds is a guess.</li><li>Rin does not lift him or sheathe her sword. There is no clip for either: she launches him with a cut, and &quot;puts the sword away&quot; is her relaxing out of her stance.</li><li>The new stair has not been looked at. No film of it was asked for, so there is none. In one room in fourteen it could not be placed and kept its old spot.</li><li>The Porter&#x27;s ending was judged from still frames, not watched in motion, by the agent that built it.</li><li>The tester has not played the changes yet. They are not in the TestFlight build.</li></ul>
+<p>Next: a new build for the tester, and their answer to the question.</p></div><nav class="post-nav"><a class="older" href="a-dev-update-you-can-watch.html"><span>Earlier</span>A dev update you can watch</a><span></span></nav></article>
+</main>
+<!-- Pondd character start -->
+<section class="pondd-about" id="about" data-pondd-character data-character-locale="en" aria-labelledby="pondd-about-title"><div class="pondd-about-inner"><div><h2 id="pondd-about-title">About the creator</h2><p>Hi, I’m <a href="https://pond1982.github.io/Pondd-Page/">Pondd</a>, the creator of Cut Cut Cut. Thanks for following the climb.</p><p>Explore my collection of apps, websites and creative projects below.</p></div><div><button class="pondd-character-stage" type="button" aria-label="Change Pondd’s dance" aria-describedby="pondd-character-hint"><span class="pondd-character-fallback" aria-hidden="true">👋<br>Pondd</span><span class="bubble" role="status" aria-live="polite">Hi! I’m Pondd. Welcome to the tower! 👋</span></button><p class="pondd-character-hint" id="pondd-character-hint">Tap the character or press Enter to change the dance.</p><button class="pondd-character-pause" type="button" aria-pressed="false" hidden>Pause dancing</button><noscript><p>Enable JavaScript to see Pondd dance. The collection links remain available without it.</p></noscript></div></div><script type="application/json" class="pondd-character-lines">["Hi! I’m Pondd. Welcome aboard Cut Cut Cut!", "Tap me to change the dance!", "Enjoy your flight over Bangkok.", "A little victory dance after your dogfight!", "Explore more of my projects below.", "One more spin!"]</script></section>
+<!-- Pondd character end --><!-- PONDD YOUTUBE CHANNELS START -->
+<section class="pondd-youtube" id="youtube" aria-labelledby="pondd-youtube-title" style="box-sizing:border-box;max-width:1100px;width:calc(100% - 32px);margin:20px auto 36px;padding:24px;background:#fff1e4;color:#2e2a27;border:1px solid #ead8c8;border-radius:16px;text-align:left"><h2 id="pondd-youtube-title" style="font-size:1.4rem;margin:0 0 12px">ช่อง YouTube ของ Pondd</h2><nav aria-label="ช่อง YouTube ของ Pondd" style="display:flex;flex-wrap:wrap;gap:12px 24px"><a href="https://www.youtube.com/@เรื่องในเงา" style="color:inherit;text-decoration:underline;text-underline-offset:3px;padding:8px 0">เรื่องในเงา ↗</a><a href="https://www.youtube.com/@เล่าเห็นภาพ" style="color:inherit;text-decoration:underline;text-underline-offset:3px;padding:8px 0">เล่าเห็นภาพ ↗</a><a href="https://www.youtube.com/@อดีตถึงวันนี้" style="color:inherit;text-decoration:underline;text-underline-offset:3px;padding:8px 0">อดีตถึงวันนี้ ↗</a></nav></section>
+<!-- PONDD YOUTUBE CHANNELS END --><!-- PONDD WEBSITE NETWORK START -->
+<style>
+.pondd-network{box-sizing:border-box;max-width:1100px;margin:32px auto;padding:20px;width:calc(100% - 32px);border:1px solid currentColor;border-radius:16px;font:16px/1.6 system-ui,sans-serif;text-align:left;color:inherit;position:relative;z-index:1}
+.pondd-network summary{cursor:pointer;font-weight:600;padding:8px 0}
+.pondd-network nav{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px 16px;margin-top:16px}
+.pondd-network nav a{color:inherit;text-decoration:underline;text-underline-offset:3px;padding:8px;overflow-wrap:anywhere}
+.pondd-network a:focus-visible,.pondd-network summary:focus-visible{outline:2px solid currentColor;outline-offset:3px}
+</style>
+<details class="pondd-network"><summary>More from Pondd · เว็บไซต์อื่น ๆ ของ Pondd</summary><nav aria-label="Pondd websites"><a href="https://pond1982.github.io/Pondd-Page/">Pondd · Portfolio</a><a href="https://pond1982.github.io/screenshot-studio/">Screenshot Studio</a><a href="https://pond1982.github.io/pet-28-days/">Pet 28 Days · ข้าวตัง &amp; ส้มโอ</a><a href="https://pond1982.github.io/21Counts-Web/">21Counts</a><a href="https://breakfinderweb.pages.dev/">BreakFinder</a><a href="https://pond1982.github.io/BuddhaBits-web/index.html">BuddhaBits</a><a href="https://pond1982.github.io/iosdeadscriptweb/index.html">Dead Script: Typing Horror</a><a href="https://easy-tracer-web.pages.dev/">Easy Tracer: Golf Swing Glow</a><a href="https://pond1982.github.io/ink-and-legend-site/">Ink &amp; Legend</a><a href="https://pond1982.github.io/ISUD-Website/isud2-support.html">ISUD 2</a><a href="https://pond1982.github.io/ISUD-Website/">ISUD Zero</a><a href="https://pond1982.github.io/Landslide-Web/index.html">Landslide Inc</a><a href="https://pond1982.github.io/Morse-Support-Site/">Morse Code with Flint</a><a href="https://pond1982.github.io/Oonmoon-Website/en/">Oonmoon: Bedtime Stories</a><a href="https://pulse-web-5vx.pages.dev/">P.U.L.S.E.</a><a href="https://pond1982.github.io/StepBlade-Website/index.html">Pip vs 10 Towers</a><a href="https://privacylensweb.pages.dev/">PrivacyLens</a><a href="https://puttandpayweb.pages.dev/">PuttAndPay</a><a href="https://pond1982.github.io/PuttPOV-Website/">PuttPOV</a><a href="https://pond1982.github.io/ReadSlipWebsite/index.html">อ่านสลิป: จดสลิปโอนเงิน</a><a href="https://pond1982.github.io/SkyFiWeb/">SkyFiCam</a><a href="https://pond1982.github.io/stackfighters-site/index.html">Stack Fighters: Puzzle Battle</a><a href="https://pond1982.github.io/stackcycle---web/">StackCycle</a><a href="https://pond1982.github.io/TheAiCompanyWeb/">The AI Company</a><a href="https://pond1982.github.io/creator-dashboard-desktop/">Argus Pip</a><a href="https://pond1982.github.io/bangkok-sky-zero/">Bangkok Sky Zero</a><a href="https://pond1982.github.io/cutcutcut/index.html">Cut Cut Cut</a></nav></details>
+<!-- PONDD WEBSITE NETWORK END -->
+<footer class="foot">
+  <div class="foot-in">
+    <img src="../media/img/logo.png" alt="" class="foot-logo">
+    <p>Cut Cut Cut: 100 Floors of Zombies. An isometric sword game for iPhone, in development.</p>
+    <nav><a href="../game.html">The Game</a><a href="../making.html">How It&#x27;s Made</a><a href="../media.html">Media</a><a href="../timeline.html">Timeline</a><a href="../devlog/index.html" aria-current="page">Dev Log</a><a href="../index.html#signup">Get notified</a><a href="../feed.xml">RSS</a><a href="https://www.youtube.com/@PonddBuilds" rel="me">YouTube</a></nav>
+    <p class="small">The residents prefer the term "undying". Rin does not. &copy; 2026 Pondd. Game art and footage are work in progress.</p>
+  </div>
+</footer>
+<div class="lightbox" hidden><button aria-label="Close">&times;</button><img alt=""></div>
+<script src="../site.js?v=be572df8" defer></script>
+</body>
+</html>

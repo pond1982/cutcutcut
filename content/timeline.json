@@ -197,5 +197,33 @@
         "link": "devlog/a-dev-update-you-can-watch.html"
       }
     ]
+  },
+  {
+    "date": "2026-11-18",
+    "label": "A tester and a finisher",
+    "summary": "The build that never reached TestFlight finally does, the first tester writes back, and the Freight Porter gets an ending of his own.",
+    "events": [
+      {
+        "time": "07:14",
+        "title": "Really on TestFlight",
+        "text": "Two uploads were dropped by Apple without a word on screen. The third is there, and was checked."
+      },
+      {
+        "time": "08:50",
+        "title": "A boss cut scene",
+        "text": "Six guardians and the ultimate, narrated."
+      },
+      {
+        "time": "10:20",
+        "title": "The first tester's notes",
+        "text": "A longer roll, softer cuts, and a flick that rolls while holding to cut."
+      },
+      {
+        "time": "14:55",
+        "title": "The Porter's own ending",
+        "text": "A finish call, a launch, thirteen cuts in slowed time, and a line about delivery.",
+        "link": "devlog/a-tester-and-a-finisher.html"
+      }
+    ]
   }
 ]

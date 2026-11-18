@@ -2,6 +2,18 @@
   "shelves": {
     "featured": [
       {
+        "name": "porter-finish",
+        "date": "2026-11-18",
+        "title": "The Porter's own ending",
+        "text": "A finish call answered in time: launched, cut thirteen times while the world runs at a twelfth of its speed, and delivered. [The post](devlog/a-tester-and-a-finisher.html)."
+      },
+      {
+        "name": "boss-cutscene",
+        "date": "2026-11-18",
+        "title": "Six guardians and the ultimate",
+        "text": "A narrated cut scene, every fight played by the game's own bot."
+      },
+      {
         "name": "dev-update-day5",
         "portrait": true,
         "date": "2026-11-17",
