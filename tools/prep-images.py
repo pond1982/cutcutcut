@@ -49,6 +49,14 @@ for name, src in [
     ("shot-falcifer-arena", "Docs/Shots/falcifer_arena_overview.png"), ("shot-falcifer-arena-fight", "Docs/Shots/falcifer_arena_fight.png"),
     ("shot-office-zombie", "Docs/Shots/office_worker_zombie.png"), ("shot-elbow-study", "Docs/Shots/Boss-Elbow-Study.png"), ("shot-icon-options", "Docs/Shots/Horai-Icon-Options.jpg"),
 ]: full(name, src)
+# Day 6's evening: a guardian room each for four of them, the phone's picture before and after, and Galahad drawn and built
+for name, src in [
+    ("shot-room-whisper", "Saved/Rooms/room-15.png"), ("shot-room-chair", "Saved/Rooms/room-55.png"), ("shot-room-collector", "Saved/Rooms/room-70.png"),
+    ("shot-room-conductor", "Saved/Rooms/room-95.png"), ("shot-room-sun", "Saved/Rooms/room-99.png"), ("shot-room-subject", "Saved/Rooms/room-30.png"),
+    ("shot-sharpness", "Saved/Sharpness/Sharpness-Before-After.png"),
+]: full(name, src)
+full("ref-galahad", "Art/Galahad/galahad_reference_front.png", maxw=900)
+full("shot-galahad-built", "Art/Galahad/gh-front.png", maxw=700)
 # the drawings three guardians were modelled from (made with the image tool; turned into 3D models in Tripo)
 for n in ["porter", "pacer", "amagiri"]: full("ref-" + n, f"Art/{n.capitalize()}/{n}_reference_front.png", maxw=900)
 # the cast as photographs (made with Seedream on JanaArt from the ink portraits; kept in the game's Saved/EndCredits/photos)

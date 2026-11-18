@@ -43,6 +43,9 @@ vid porter-finish        "$G/Saved/FinishCall/Porter-Own-Ending.mp4" 8
 vid six-endings          "$G/Saved/FinishCall/Six-Endings.mp4" 9 28
 vid roll-before-after    "$G/Saved/FeelCompare/Feel-Before-After.mp4" 3
 vid flick-before-after   "$G/Saved/FeelCompare/Flick-Roll-Before-After.mp4" 5
+vid six-endings-rebuilt  "$G/Saved/FinishCall/Six-Endings.mp4" 9 28
+vid galahad-new-body     "$G/Saved/Galahad/Galahad-Oval-Shield.mp4" 6 28
+vid ultimate-impact-frame "$G/Saved/ImpactFrames/Rin-Ultimate-New-Landing.mp4" 2.2
 du -sh "$OUT"
 
 # ---- the home page's rotating reel: short silent clips of real play, cut from the videos above ----

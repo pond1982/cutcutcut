@@ -200,8 +200,8 @@
   },
   {
     "date": "2026-11-18",
-    "label": "A tester and a finisher",
-    "summary": "The build that never reached TestFlight finally does, the first tester writes back, and one boss's ending becomes six shared by nearly all of them.",
+    "label": "A tester, a finisher, and a long evening",
+    "summary": "The build that never reached TestFlight finally does, the first tester writes back, and one boss's ending becomes six shared by nearly all of them. Then the evening: the guardians' rooms are dressed, Galahad is rebuilt from a drawing, and the ultimate gets an impact frame.",
     "events": [
       {
         "time": "07:14",
@@ -229,6 +229,39 @@
         "title": "Six shared endings",
         "text": "Every guardian but one gets a finish call, six endings dealt at random, and a PA that shouts FINALISE HIM!",
         "link": "devlog/six-ways-to-finalise.html"
+      },
+      {
+        "time": "19:30",
+        "title": "The endings rebuilt",
+        "text": "A launcher, an air cut, a dive and a real sheathing, all from clips that were already in the project.",
+        "link": "devlog/rooms-a-new-galahad-and-one-black-frame.html"
+      },
+      {
+        "time": "20:10",
+        "title": "A sharper phone",
+        "text": "The newest iPhone had been drawing a quarter of its pixels. The setting is raised; not yet measured on a phone."
+      },
+      {
+        "time": "21:40",
+        "title": "Full rooms",
+        "text": "Every guardian's room dressed to its story: wall pieces, signs, litter and a marking on the floor. No fight is changed.",
+        "link": "devlog/rooms-a-new-galahad-and-one-black-frame.html"
+      },
+      {
+        "time": "22:45",
+        "title": "Galahad, from a drawing",
+        "text": "His own body and moves, and a shield that took four tries to become an oval of light over his hand.",
+        "link": "devlog/rooms-a-new-galahad-and-one-black-frame.html"
+      },
+      {
+        "time": "23:30",
+        "title": "One black frame",
+        "text": "An impact frame on the ultimate's kick, one of ten at random, and a landing that no longer leans back."
+      },
+      {
+        "time": "23:59",
+        "title": "Sparks, steam and butterflies",
+        "text": "An effects pack in the guardians' rooms and at the moments of their fights."
       }
     ]
   }

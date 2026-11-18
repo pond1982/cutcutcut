@@ -2,6 +2,24 @@
   "shelves": {
     "featured": [
       {
+        "name": "galahad-new-body",
+        "date": "2026-11-18",
+        "title": "Galahad, rebuilt",
+        "text": "His own body from a drawing, an oval shield of light over his hand, and the start of his fight. [The post](devlog/rooms-a-new-galahad-and-one-black-frame.html)."
+      },
+      {
+        "name": "ultimate-impact-frame",
+        "date": "2026-11-18",
+        "title": "One black frame",
+        "text": "The ultimate with an impact frame on the kick and a new landing after it. [The post](devlog/rooms-a-new-galahad-and-one-black-frame.html)."
+      },
+      {
+        "name": "six-endings-rebuilt",
+        "date": "2026-11-18",
+        "title": "The six endings, rebuilt",
+        "text": "The same six on the Freight Porter, now with a launcher, a dive and a sword that is really put away. [The post](devlog/rooms-a-new-galahad-and-one-black-frame.html)."
+      },
+      {
         "name": "six-endings",
         "date": "2026-11-18",
         "title": "Six ways to finalise a guardian",
