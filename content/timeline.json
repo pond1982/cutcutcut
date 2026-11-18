@@ -201,7 +201,7 @@
   {
     "date": "2026-11-18",
     "label": "A tester and a finisher",
-    "summary": "The build that never reached TestFlight finally does, the first tester writes back, and the Freight Porter gets an ending of his own.",
+    "summary": "The build that never reached TestFlight finally does, the first tester writes back, and one boss's ending becomes six shared by nearly all of them.",
     "events": [
       {
         "time": "07:14",
@@ -223,6 +223,12 @@
         "title": "The Porter's own ending",
         "text": "A finish call, a launch, thirteen cuts in slowed time, and a line about delivery.",
         "link": "devlog/a-tester-and-a-finisher.html"
+      },
+      {
+        "time": "17:10",
+        "title": "Six shared endings",
+        "text": "Every guardian but one gets a finish call, six endings dealt at random, and a PA that shouts FINALISE HIM!",
+        "link": "devlog/six-ways-to-finalise.html"
       }
     ]
   }

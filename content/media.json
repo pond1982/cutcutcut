@@ -2,6 +2,12 @@
   "shelves": {
     "featured": [
       {
+        "name": "six-endings",
+        "date": "2026-11-18",
+        "title": "Six ways to finalise a guardian",
+        "text": "Diced, Bisected, Launched, Spiked, Stamped and Pinned, all on the Freight Porter. [The post](devlog/six-ways-to-finalise.html)."
+      },
+      {
         "name": "porter-finish",
         "date": "2026-11-18",
         "title": "The Porter's own ending",
