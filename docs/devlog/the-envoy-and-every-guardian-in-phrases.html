@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Envoy, and every guardian in phrases · Cut Cut Cut</title>
+<meta name="description" content="Sounds, a size check that found a broken build, and a long day on the Envoy that ended with the real reason his body kept vanishing. Then every guardian&#x27;s fight is rebuilt from short mixed phrases, and a new build goes to TestFlight and Android.">
+<meta property="og:title" content="The Envoy, and every guardian in phrases · Cut Cut Cut">
+<meta property="og:description" content="Sounds, a size check that found a broken build, and a long day on the Envoy that ended with the real reason his body kept vanishing. Then every guardian&#x27;s fight is rebuilt from short mixed phrases, and a new build goes to TestFlight and Android.">
+<meta property="og:image" content="https://pond1982.github.io/cutcutcut/media/video/envoy-body-stays.jpg">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../media/img/icon-48.png">
+<link rel="apple-touch-icon" href="../media/img/icon-180.png">
+<link rel="alternate" type="application/rss+xml" title="Cut Cut Cut dev log" href="../feed.xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;1,800;1,900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css?v=bdafa914">
+<link rel="stylesheet" href="../pondd-character/character.css">
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>
+<script type="module" src="../pondd-character/init.js"></script>
+</head>
+<body class="page-post">
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="brand-welcome"><a class="brand" href="../index.html" aria-label="Cut Cut Cut home"><img src="../media/img/logo.png" alt="Cut Cut Cut"></a>
+    <div class="visitor-tag"><span>Welcome, you are visitor number <strong>001,337</strong></span><small>Fictional counter · just for fun</small></div>
+  </div>
+  <button class="menu" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  <nav class="nav"><a href="../game.html">The Game</a><a href="../making.html">How It&#x27;s Made</a><a href="../media.html">Media</a><a href="../timeline.html">Timeline</a><a href="../devlog/index.html" aria-current="page">Dev Log</a></nav>
+</header>
+<main id="main">
+<article class="post"><header class="post-head"><a class="back" href="index.html">Dev log</a><h1>The Envoy, and every guardian in phrases</h1><p class="lede">Sounds, a size check that found a broken build, and a long day on the Envoy that ended with the real reason his body kept vanishing. Then every guardian&#x27;s fight is rebuilt from short mixed phrases, and a new build goes to TestFlight and Android.</p><div class="meta"><time datetime="2026-11-19">Day 7</time><div class="tags"><span>Bosses</span><span>Combat</span><span>Builds</span><span>Video</span></div></div></header><div class="prose"><p>Yesterday ended on a build for TestFlight. Today started with sound and finished with every guardian fighting differently.</p>
+<h2>Fourteen sounds, and a size check</h2>
+<p>The owner added a free pack of game sounds. Fourteen of them went in: the Expedition&#x27;s gunfire, a weapon being drawn, explosions, debris, a creature&#x27;s roar. Before adding them the owner asked whether sound files would bloat a phone game. Together they are under five megabytes.</p>
+<p>The owner then asked why the iPhone app was already near 400 MB. Counting it showed most of that is the engine and a handful of art packs, with perhaps 80 to 100 MB that could be cut. Counting it also showed something worse. Yesterday&#x27;s TestFlight build did not contain Galahad&#x27;s new body, the room effects or the impact frames. The game loads those by name, and the list of folders to pack into a phone build did not name them. The list is fixed, and today&#x27;s build was checked file by file.</p>
+<h2>The Envoy</h2>
+<p>The Envoy is the Expedition&#x27;s field commander on floor 85, and he fights from range. The owner wanted a distortion effect to make him harder to fight. He went through four versions today, each changed after the owner watched the last.</p>
+<p>1. <strong>A cloak.</strong> He bent the air and turned half invisible. The owner found it confusing: he flickered, ghosted, and seemed to run in place. 2. <strong>A rifleman who leaps.</strong> The cloak went. He keeps his distance and jumps away fast and far when she closes, with the air bending where he left. The owner asked for a knife for when she does get close. 3. <strong>Phrases.</strong> His attacks were rebuilt as short runs of moves mixed together, so the next one cannot be learned by rote: suppress, break contact, sweep, crossfire. Single shots, fans of shots, a concussion ring, leaps and the knife are the pieces. After the last move of a phrase he is open. 4. <strong>Fixed.</strong> The owner reported that he still vanished, and that he kept running at Rin when he should only go away or to the side.</p>
+<h2>Why he vanished</h2>
+<p>The first guesses were wrong. His leaps took him past the edge of the screen for a second. He wears black, kneels to aim, and the floor is dark. Both were true, and both were fixed: he carries a small light now, leaps less far, and the camera holds him larger. Neither was the real cause.</p>
+<p>The owner sent a single stopped frame: his name label and his light on the floor, and no body under them. That frame was the clue. His firing animation was the kind made to be layered on top of another pose, a recoil and nothing more. Played on its own, it puts every bone of the body at one point. For the length of every volley, his body was drawn as a dot.</p>
+<p>The game now refuses to play that kind of clip as a whole pose, for every character. His rifle team used the same clip when kneeling, so they are fixed too. He fires from his aim with no recoil, and in the film he is never gone.</p>
+<figure class="video"><video controls preload="none" playsinline poster="../media/video/envoy-body-stays.jpg"><source src="../media/video/envoy-body-stays.mp4" type="video/mp4"></video><figcaption>The Envoy after the fix: lit, never closing in, and present for every shot.</figcaption></figure>
+<p>He also no longer moves toward her. The knife is only for when she has come to him.</p>
+<h2>Every guardian in phrases</h2>
+<p>The owner asked for an audit of how every guardian chooses its next move. Only the Envoy had phrases. Five guardians drew forms from a shuffled bag. Four of the last five guardians repeated a single floor attack. Five of the older ones swung at random.</p>
+<p>The owner&#x27;s answer was that every guardian should have a complex fight. So every guardian but Homura and the Orderly now fights in phrases: two or three moves run together with barely a pause, then an opening, never the same phrase twice in a row, and one phrase each held back for when they are badly hurt.</p>
+<ul><li><strong>27 new floor attacks.</strong> Galahad rams, slams the floor and sweeps his shield. The Sky Elder sends crossing currents, a whirlpool that closes from the outside in, and pools round her feet. The Sun Messiah throws his halo, burns where Rin stands and fires one broad beam. Dr. Amagiri cuts, lights the garden&#x27;s beds in rows and sends roots up under her.</li><li><strong>The older guardians</strong> mix their old swings with new floor attacks. Whisper throws papers and stamps the floor. Subject 001 charges the length of the room. The Collector drops a display case round her: the frame first, then the middle.</li><li><strong>The guardians who fight in forms</strong> now chain them: one or two forms in a row at first, two or three once hurt, with no opening inside a run.</li><li><strong>Left as they were:</strong> Homura and the Orderly already mix their moves, and the first meeting with Falcifer is a lesson.</li></ul>
+<p>None of it has been filmed yet. The attack names are the agent&#x27;s, not yet the owner&#x27;s.</p>
+<h2>New builds</h2>
+<p>A new build is on TestFlight, and Apple has marked it valid. It carries everything above and everything the last one was missing. An Android build was made too.</p>
+<h2>What has not been checked</h2>
+<ul><li><strong>Nothing here has been played by hand.</strong> Every fight was run by the game&#x27;s own bot.</li><li><strong>No guardian&#x27;s new phrases have been seen.</strong> They were checked in fights run without a picture, by their logs: every guardian&#x27;s phrases ran, with no errors. No film was made of them.</li><li><strong>Every new floor attack plays its guardian&#x27;s one attack animation.</strong> Only the marks on the floor differ.</li><li><strong>Difficulty is untuned.</strong> Openings now come less often, so every guardian is harder and the fights are longer.</li><li><strong>Neither build has been opened on a phone.</strong> The Android build is 434 MB; the iPhone build is likely larger than before, with what was missing now added.</li><li><strong>The Envoy&#x27;s distortion has never shown in a Mac film.</strong> It is switched on for newer Pro iPhones only.</li><li>The automated tests that need no special setup pass.</li></ul>
+<p>Next: the owner&#x27;s hands on the new fights.</p></div><nav class="post-nav"><a class="older" href="rooms-a-new-galahad-and-one-black-frame.html"><span>Earlier</span>Full rooms, a new Galahad, and one black frame</a><span></span></nav></article>
+</main>
+<!-- Pondd character start -->
+<section class="pondd-about" id="about" data-pondd-character data-character-locale="en" aria-labelledby="pondd-about-title"><div class="pondd-about-inner"><div><h2 id="pondd-about-title">About the creator</h2><p>Hi, I’m <a href="https://pond1982.github.io/Pondd-Page/">Pondd</a>, the creator of Cut Cut Cut. Thanks for following the climb.</p><p>Explore my collection of apps, websites and creative projects below.</p></div><div><button class="pondd-character-stage" type="button" aria-label="Change Pondd’s dance" aria-describedby="pondd-character-hint"><span class="pondd-character-fallback" aria-hidden="true">👋<br>Pondd</span><span class="bubble" role="status" aria-live="polite">Hi! I’m Pondd. Welcome to the tower! 👋</span></button><p class="pondd-character-hint" id="pondd-character-hint">Tap the character or press Enter to change the dance.</p><button class="pondd-character-pause" type="button" aria-pressed="false" hidden>Pause dancing</button><noscript><p>Enable JavaScript to see Pondd dance. The collection links remain available without it.</p></noscript></div></div><script type="application/json" class="pondd-character-lines">["Hi! I’m Pondd. Welcome aboard Cut Cut Cut!", "Tap me to change the dance!", "Enjoy your flight over Bangkok.", "A little victory dance after your dogfight!", "Explore more of my projects below.", "One more spin!"]</script></section>
+<!-- Pondd character end --><!-- PONDD YOUTUBE CHANNELS START -->
+<section class="pondd-youtube" id="youtube" aria-labelledby="pondd-youtube-title" style="box-sizing:border-box;max-width:1100px;width:calc(100% - 32px);margin:20px auto 36px;padding:24px;background:#fff1e4;color:#2e2a27;border:1px solid #ead8c8;border-radius:16px;text-align:left"><h2 id="pondd-youtube-title" style="font-size:1.4rem;margin:0 0 12px">ช่อง YouTube ของ Pondd</h2><nav aria-label="ช่อง YouTube ของ Pondd" style="display:flex;flex-wrap:wrap;gap:12px 24px"><a href="https://www.youtube.com/@เรื่องในเงา" style="color:inherit;text-decoration:underline;text-underline-offset:3px;padding:8px 0">เรื่องในเงา ↗</a><a href="https://www.youtube.com/@เล่าเห็นภาพ" style="color:inherit;text-decoration:underline;text-underline-offset:3px;padding:8px 0">เล่าเห็นภาพ ↗</a><a href="https://www.youtube.com/@อดีตถึงวันนี้" style="color:inherit;text-decoration:underline;text-underline-offset:3px;padding:8px 0">อดีตถึงวันนี้ ↗</a></nav></section>
+<!-- PONDD YOUTUBE CHANNELS END --><!-- PONDD WEBSITE NETWORK START -->
+<style>
+.pondd-network{box-sizing:border-box;max-width:1100px;margin:32px auto;padding:20px;width:calc(100% - 32px);border:1px solid currentColor;border-radius:16px;font:16px/1.6 system-ui,sans-serif;text-align:left;color:inherit;position:relative;z-index:1}
+.pondd-network summary{cursor:pointer;font-weight:600;padding:8px 0}
+.pondd-network nav{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px 16px;margin-top:16px}
+.pondd-network nav a{color:inherit;text-decoration:underline;text-underline-offset:3px;padding:8px;overflow-wrap:anywhere}
+.pondd-network a:focus-visible,.pondd-network summary:focus-visible{outline:2px solid currentColor;outline-offset:3px}
+</style>
+<details class="pondd-network"><summary>More from Pondd · เว็บไซต์อื่น ๆ ของ Pondd</summary><nav aria-label="Pondd websites"><a href="https://pond1982.github.io/Pondd-Page/">Pondd · Portfolio</a><a href="https://pond1982.github.io/screenshot-studio/">Screenshot Studio</a><a href="https://pond1982.github.io/pet-28-days/">Pet 28 Days · ข้าวตัง &amp; ส้มโอ</a><a href="https://pond1982.github.io/21Counts-Web/">21Counts</a><a href="https://breakfinderweb.pages.dev/">BreakFinder</a><a href="https://pond1982.github.io/BuddhaBits-web/index.html">BuddhaBits</a><a href="https://pond1982.github.io/iosdeadscriptweb/index.html">Dead Script: Typing Horror</a><a href="https://easy-tracer-web.pages.dev/">Easy Tracer: Golf Swing Glow</a><a href="https://pond1982.github.io/ink-and-legend-site/">Ink &amp; Legend</a><a href="https://pond1982.github.io/ISUD-Website/isud2-support.html">ISUD 2</a><a href="https://pond1982.github.io/ISUD-Website/">ISUD Zero</a><a href="https://pond1982.github.io/Landslide-Web/index.html">Landslide Inc</a><a href="https://pond1982.github.io/Morse-Support-Site/">Morse Code with Flint</a><a href="https://pond1982.github.io/Oonmoon-Website/en/">Oonmoon: Bedtime Stories</a><a href="https://pulse-web-5vx.pages.dev/">P.U.L.S.E.</a><a href="https://pond1982.github.io/StepBlade-Website/index.html">Pip vs 10 Towers</a><a href="https://privacylensweb.pages.dev/">PrivacyLens</a><a href="https://puttandpayweb.pages.dev/">PuttAndPay</a><a href="https://pond1982.github.io/PuttPOV-Website/">PuttPOV</a><a href="https://pond1982.github.io/ReadSlipWebsite/index.html">อ่านสลิป: จดสลิปโอนเงิน</a><a href="https://pond1982.github.io/SkyFiWeb/">SkyFiCam</a><a href="https://pond1982.github.io/stackfighters-site/index.html">Stack Fighters: Puzzle Battle</a><a href="https://pond1982.github.io/stackcycle---web/">StackCycle</a><a href="https://pond1982.github.io/TheAiCompanyWeb/">The AI Company</a><a href="https://pond1982.github.io/creator-dashboard-desktop/">Argus Pip</a><a href="https://pond1982.github.io/bangkok-sky-zero/">Bangkok Sky Zero</a><a href="https://pond1982.github.io/cutcutcut/index.html">Cut Cut Cut</a></nav></details>
+<!-- PONDD WEBSITE NETWORK END -->
+<footer class="foot">
+  <div class="foot-in">
+    <img src="../media/img/logo.png" alt="" class="foot-logo">
+    <p>Cut Cut Cut: 100 Floors of Zombies. An isometric sword game for iPhone, in development.</p>
+    <nav><a href="../game.html">The Game</a><a href="../making.html">How It&#x27;s Made</a><a href="../media.html">Media</a><a href="../timeline.html">Timeline</a><a href="../devlog/index.html" aria-current="page">Dev Log</a><a href="../index.html#signup">Get notified</a><a href="../feed.xml">RSS</a><a href="https://www.youtube.com/@PonddBuilds" rel="me">YouTube</a></nav>
+    <p class="small">The residents prefer the term "undying". Rin does not. &copy; 2026 Pondd. Game art and footage are work in progress.</p>
+  </div>
+</footer>
+<div class="lightbox" hidden><button aria-label="Close">&times;</button><img alt=""></div>
+<script src="../site.js?v=be572df8" defer></script>
+</body>
+</html>

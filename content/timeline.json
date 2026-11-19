@@ -264,5 +264,38 @@
         "text": "An effects pack in the guardians' rooms and at the moments of their fights."
       }
     ]
+  },
+  {
+    "date": "2026-11-19",
+    "label": "The Envoy, and every guardian in phrases",
+    "summary": "Sounds go in, a size check finds the last build was missing its new art, and the Envoy is rebuilt four times before the real reason his body vanished turns up. Then every guardian's fight is made of short mixed phrases, and new builds go to TestFlight and Android.",
+    "events": [
+      {
+        "time": "10:00",
+        "title": "Fourteen sounds",
+        "text": "Gunfire, a drawn weapon, explosions and a roar, in under five megabytes."
+      },
+      {
+        "time": "11:00",
+        "title": "A size check",
+        "text": "Most of the app is the engine and a few art packs. The last build was missing Galahad and the effects; the pack list is fixed."
+      },
+      {
+        "time": "13:40",
+        "title": "Why the Envoy vanished",
+        "text": "A recoil clip played as a whole pose drew his body as a single point for every volley.",
+        "link": "devlog/the-envoy-and-every-guardian-in-phrases.html"
+      },
+      {
+        "time": "15:20",
+        "title": "Every guardian in phrases",
+        "text": "27 new floor attacks, mixed into short runs, never the same one twice."
+      },
+      {
+        "time": "15:30",
+        "title": "New builds",
+        "text": "On TestFlight, marked valid by Apple, and an Android build."
+      }
+    ]
   }
 ]

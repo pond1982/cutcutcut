@@ -46,6 +46,7 @@ vid flick-before-after   "$G/Saved/FeelCompare/Flick-Roll-Before-After.mp4" 5
 vid six-endings-rebuilt  "$G/Saved/FinishCall/Six-Endings.mp4" 9 28
 vid galahad-new-body     "$G/Saved/Galahad/Galahad-Oval-Shield.mp4" 6 28
 vid ultimate-impact-frame "$G/Saved/ImpactFrames/Rin-Ultimate-New-Landing.mp4" 2.2
+vid envoy-body-stays     "$G/Saved/Envoy/Envoy-Body-Stays.mp4" 12 28
 du -sh "$OUT"
 
 # ---- the home page's rotating reel: short silent clips of real play, cut from the videos above ----
