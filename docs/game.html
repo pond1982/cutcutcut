@@ -15,7 +15,7 @@
 <link rel="alternate" type="application/rss+xml" title="Cut Cut Cut dev log" href="feed.xml">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;1,800;1,900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=5448da08">
+<link rel="stylesheet" href="style.css?v=adbdca72">
 <link rel="stylesheet" href="pondd-character/character.css">
 <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>
 <script type="module" src="pondd-character/init.js"></script>
@@ -24,8 +24,8 @@
 <a class="skip" href="#main">Skip to content</a>
 <header class="top">
   <div class="brand-welcome"><a class="brand" href="index.html" aria-label="Cut Cut Cut home"><img src="media/img/logo.png" alt="Cut Cut Cut"></a>
-    <div class="visitor-tag"><span>Welcome, you are visitor number <strong>001,337</strong></span><small>Fictional counter · just for fun</small></div>
   </div>
+  <form class="signup in-nav" id="signup" action="https://app.kit.com/forms/10202332/subscriptions" method="post" target="_blank" novalidate><label class="sr" for="su-email-nav">Email address</label><input id="su-email-nav" type="email" name="email_address" placeholder="Your email" autocomplete="email" required><button class="btn red" type="submit"><span>Keep me in the loop</span></button><p class="signup-msg" role="status" aria-live="polite" hidden></p></form>
   <button class="menu" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
   <nav class="nav"><a href="game.html" aria-current="page">The Game</a><a href="making.html">How It&#x27;s Made</a><a href="media.html">Media</a><a href="timeline.html">Timeline</a><a href="devlog/index.html">Dev Log</a></nav>
 </header>
@@ -146,14 +146,14 @@
   </div>
 </section>
 
-<section class="band signup-band" id="signup">
+<section class="band signup-band" id="beta">
   <div class="wrap split">
     <div>
-      <p class="eyebrow">Launch list</p>
-      <h2>Be told when the doors open</h2>
-      <p class="lead" style="margin-top:20px">Leave an email and say which phone you play on. You get one message when the beta opens for your phone, and one on launch day. Nothing else.</p>
+      <p class="eyebrow">Public beta</p>
+      <h2>Help test the tower</h2>
+      <p class="lead" style="margin-top:20px">The iPhone beta is open on TestFlight. Play it, break it, and tell us what is too hard. Android is coming; leave your email in the bar at the top to hear when.</p>
     </div>
-    <div><form class="signup " action="https://app.kit.com/forms/10202332/subscriptions" method="post" target="_blank" novalidate><div class="signup-beta"><div class="beta-tile"><p class="beta-os">iPhone</p><a class="beta-qr" href="https://testflight.apple.com/join/PsPjMSvH"><img src="media/img/testflight-qr.svg" width="120" height="120" alt="QR code for the TestFlight beta"></a><a class="btn red beta-join" href="https://testflight.apple.com/join/PsPjMSvH"><span>Join on TestFlight</span></a></div><div class="beta-tile soon"><p class="beta-os">Android</p><div class="beta-wait">Coming <br>soon</div><p class="beta-later">Keep in the loop below and you will hear first.</p></div></div><div class="signup-row"><label class="sr" for="su-email-page">Email address</label><input id="su-email-page" type="email" name="email_address" placeholder="you@example.com" autocomplete="email" required><button class="btn red" type="submit"><span>Keep me in the loop</span></button></div><p class="signup-note">News from the build now and then, and one email at launch. We will send a confirmation email first; unsubscribe any time.</p><p class="signup-msg" role="status" aria-live="polite" hidden></p><div class="signup-done" role="status" aria-live="polite" hidden><img class="signup-done-logo" src="media/img/logo.png" alt="Cut Cut Cut"><p class="signup-done-head">One more cut</p><p class="signup-done-lead">Your name is at the front desk. Confirm it and you are on the list.</p><ol class="signup-done-steps"><li>Open the email we just sent to <b class="signup-done-to">your inbox</b>.</li><li>Press the confirm button in it.</li><li>That is all. We write when there is news, and again at launch.</li></ol><p class="signup-note">Nothing in a few minutes? Look in Spam or Promotions. <button type="button" class="signup-again">Use a different address</button></p></div></form></div>
+    <div><div class="signup-beta beta-box"><div class="beta-tile"><p class="beta-os">iPhone</p><a class="beta-qr" href="https://testflight.apple.com/join/PsPjMSvH"><img src="media/img/testflight-qr.svg" width="120" height="120" alt="QR code for the TestFlight beta"></a><a class="btn red beta-join" href="https://testflight.apple.com/join/PsPjMSvH"><span>Join on TestFlight</span></a></div><div class="beta-tile soon"><p class="beta-os">Android</p><div class="beta-wait">Coming <br>soon</div><p class="beta-later">Leave your email at the top of the page and you will hear first.</p></div></div></div>
   </div>
 </section>
 
@@ -176,7 +176,7 @@
   <div class="foot-in">
     <img src="media/img/logo.png" alt="" class="foot-logo">
     <p>Cut Cut Cut: 100 Floors of Zombies. An isometric sword game for iPhone, in development.</p>
-    <nav><a href="game.html" aria-current="page">The Game</a><a href="making.html">How It&#x27;s Made</a><a href="media.html">Media</a><a href="timeline.html">Timeline</a><a href="devlog/index.html">Dev Log</a><a href="index.html#signup">Get notified</a><a href="feed.xml">RSS</a><a href="https://www.youtube.com/@PonddBuilds" rel="me">YouTube</a></nav>
+    <nav><a href="game.html" aria-current="page">The Game</a><a href="making.html">How It&#x27;s Made</a><a href="media.html">Media</a><a href="timeline.html">Timeline</a><a href="devlog/index.html">Dev Log</a><a href="#signup">Keep in the loop</a><a href="feed.xml">RSS</a><a href="https://www.youtube.com/@PonddBuilds" rel="me">YouTube</a></nav>
     <p class="small">The residents prefer the term "undying". Rin does not. &copy; 2026 Pondd. Game art and footage are work in progress.</p>
   </div>
 </footer>

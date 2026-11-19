@@ -31,6 +31,17 @@ def stamp(name):
     when it changes instead of showing new pages with an old cached stylesheet."""
     return hashlib.sha1((ROOT / "static" / name).read_bytes()).hexdigest()[:8]
 TESTFLIGHT = "https://testflight.apple.com/join/PsPjMSvH"  # the iPhone public beta
+
+
+def nav_signup(root):
+    """The launch list in the top bar, on every page: an address and one button. (Kit's answer is a line under it.)"""
+    su = SITE.get("signup")
+    if not su: return ""
+    return (f'<form class="signup in-nav" id="signup" action="{esc(su["action"])}" method="post" target="_blank" novalidate>'
+            f'<label class="sr" for="su-email-nav">Email address</label>'
+            f'<input id="su-email-nav" type="email" name="email_address" placeholder="Your email" autocomplete="email" required>'
+            f'<button class="btn red" type="submit"><span>Keep me in the loop</span></button>'
+            f'<p class="signup-msg" role="status" aria-live="polite" hidden></p></form>')
 DAY_ONE = datetime.date(2026, 11, 13)  # the first night of the project
 
 
@@ -171,8 +182,8 @@ def layout(title, description, body, root="", page="", body_class="", og=None):
 <a class="skip" href="#main">Skip to content</a>
 <header class="top">
   <div class="brand-welcome"><a class="brand" href="{root}index.html" aria-label="{esc(SITE['name'])} home"><img src="{root}media/img/logo.png" alt="{esc(SITE['name'])}"></a>
-    <div class="visitor-tag"><span>Welcome, you are visitor number <strong>001,337</strong></span><small>Fictional counter · just for fun</small></div>
   </div>
+  {nav_signup(root)}
   <button class="menu" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
   <nav class="nav">{nav}</nav>
 </header>
@@ -184,7 +195,7 @@ def layout(title, description, body, root="", page="", body_class="", og=None):
   <div class="foot-in">
     <img src="{root}media/img/logo.png" alt="" class="foot-logo">
     <p>{esc(SITE['name'])}: {esc(SITE['tagline'])}. An isometric sword game for iPhone, in development.</p>
-    <nav>{nav}<a href="{root}index.html#signup">Get notified</a><a href="{root}feed.xml">RSS</a>{f'<a href="{esc(SITE["youtube"])}" rel="me">YouTube</a>' if SITE.get("youtube") else ""}</nav>
+    <nav>{nav}<a href="#signup">Keep in the loop</a><a href="{root}feed.xml">RSS</a>{f'<a href="{esc(SITE["youtube"])}" rel="me">YouTube</a>' if SITE.get("youtube") else ""}</nav>
     <p class="small">The residents prefer the term "undying". Rin does not. &copy; {datetime.date.today().year} {esc(SITE['owner'])}. Game art and footage are work in progress.</p>
   </div>
 </footer>
@@ -248,15 +259,15 @@ def blocks(root, posts):
     if su:
         # The public beta, in the same box: a tile per phone. The iPhone's has the TestFlight QR code (for someone
         # reading on a computer) and a button (for someone already on the phone); Android's says it is coming.
-        beta = (f'<div class="signup-beta">'
+        b["beta"] = (f'<div class="signup-beta beta-box">'
                 f'<div class="beta-tile"><p class="beta-os">iPhone</p>'
                 f'<a class="beta-qr" href="{TESTFLIGHT}"><img src="{root}media/img/testflight-qr.svg" width="120" height="120" alt="QR code for the TestFlight beta"></a>'
                 f'<a class="btn red beta-join" href="{TESTFLIGHT}"><span>Join on TestFlight</span></a></div>'
                 f'<div class="beta-tile soon"><p class="beta-os">Android</p><div class="beta-wait">Coming <br>soon</div>'
-                f'<p class="beta-later">Keep in the loop below and you will hear first.</p></div></div>')
+                f'<p class="beta-later">Leave your email at the top of the page and you will hear first.</p></div></div>')
         def signup(cls, key):
             return (f'<form class="signup {cls}" action="{esc(su["action"])}" method="post" target="_blank" novalidate>'
-                    f'{beta}<div class="signup-row"><label class="sr" for="su-email-{key}">Email address</label>'
+                    f'<div class="signup-row"><label class="sr" for="su-email-{key}">Email address</label>'
                     f'<input id="su-email-{key}" type="email" name="email_address" placeholder="you@example.com" autocomplete="email" required>'
                     f'<button class="btn red" type="submit"><span>Keep me in the loop</span></button></div>'
                     f'<p class="signup-note">News from the build now and then, and one email at launch. We will send a confirmation email first; unsubscribe any time.</p>'
@@ -272,7 +283,6 @@ def blocks(root, posts):
                     f'<p class="signup-note">Nothing in a few minutes? Look in Spam or Promotions. <button type="button" class="signup-again">Use a different address</button></p>'
                     f'</div></form>')
         b["signup"] = signup("", "page")
-        b["signup_hero"] = signup("in-hero", "hero")  # (the same form, slimmer, for the top of the home page)
     for key, vs in media["shelves"].items(): b["shelf_" + key] = shelf(vs)
     for key, names in media["galleries"].items(): b["gallery_" + key] = gallery(names, root)
     return b
