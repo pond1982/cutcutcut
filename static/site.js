@@ -53,7 +53,6 @@
     f.addEventListener("submit", (e) => {
       e.preventDefault();
       if (!email.value.trim() || !email.checkValidity()) { say("Please enter a valid email address.", false); email.focus(); return; }
-      if (!f.querySelector("input[type=radio]:checked")) { say("Please choose iPhone or Android.", false); return; }
       btn.disabled = true;
       fetch(f.action, { method: "POST", body: new FormData(f), headers: { Accept: "application/json" } })
         .then((r) => r.json().catch(() => ({})).then((d) => ({ r, d })))

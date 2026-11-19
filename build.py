@@ -30,6 +30,7 @@ def stamp(name):
     """A short fingerprint of a static file, added to its address (style.css?v=...), so browsers fetch the new one
     when it changes instead of showing new pages with an old cached stylesheet."""
     return hashlib.sha1((ROOT / "static" / name).read_bytes()).hexdigest()[:8]
+TESTFLIGHT = "https://testflight.apple.com/join/PsPjMSvH"  # the iPhone public beta
 DAY_ONE = datetime.date(2026, 11, 13)  # the first night of the project
 
 
@@ -245,14 +246,20 @@ def blocks(root, posts):
     # tag. Kit sends the confirmation email: nobody is on the list until they have clicked it.
     su = SITE.get("signup")
     if su:
-        radios = "".join(f'<label class="pick"><input type="radio" name="tags[]" value="{d["tag"]}" required><span>{esc(d["label"])}</span></label>' for d in su["devices"])
+        # The public beta, in the same box: a tile per phone. The iPhone's has the TestFlight QR code (for someone
+        # reading on a computer) and a button (for someone already on the phone); Android's says it is coming.
+        beta = (f'<div class="signup-beta">'
+                f'<div class="beta-tile"><p class="beta-os">iPhone</p>'
+                f'<a class="beta-qr" href="{TESTFLIGHT}"><img src="{root}media/img/testflight-qr.svg" width="120" height="120" alt="QR code for the TestFlight beta"></a>'
+                f'<a class="btn red beta-join" href="{TESTFLIGHT}"><span>Join on TestFlight</span></a></div>'
+                f'<div class="beta-tile soon"><p class="beta-os">Android</p><div class="beta-wait">Coming <br>soon</div>'
+                f'<p class="beta-later">Keep in the loop below and you will hear first.</p></div></div>')
         def signup(cls, key):
             return (f'<form class="signup {cls}" action="{esc(su["action"])}" method="post" target="_blank" novalidate>'
-                    f'<div class="signup-row"><label class="sr" for="su-email-{key}">Email address</label>'
+                    f'{beta}<div class="signup-row"><label class="sr" for="su-email-{key}">Email address</label>'
                     f'<input id="su-email-{key}" type="email" name="email_address" placeholder="you@example.com" autocomplete="email" required>'
-                    f'<button class="btn red" type="submit"><span>Notify me</span></button></div>'
-                    f'<fieldset class="signup-phone"><legend>I play on</legend>{radios}</fieldset>'
-                    f'<p class="signup-note">One email when the beta opens and one at launch. We will send a confirmation email first; unsubscribe any time.</p>'
+                    f'<button class="btn red" type="submit"><span>Keep me in the loop</span></button></div>'
+                    f'<p class="signup-note">News from the build now and then, and one email at launch. We will send a confirmation email first; unsubscribe any time.</p>'
                     f'<p class="signup-msg" role="status" aria-live="polite" hidden></p>'
                     # (what site.js shows in the form's place once Kit has taken the address: the next step, in the
                     # game's own dress, instead of one line of text)
@@ -261,7 +268,7 @@ def blocks(root, posts):
                     f'<p class="signup-done-head">One more cut</p>'
                     f'<p class="signup-done-lead">Your name is at the front desk. Confirm it and you are on the list.</p>'
                     f'<ol class="signup-done-steps"><li>Open the email we just sent to <b class="signup-done-to">your inbox</b>.</li>'
-                    f'<li>Press the confirm button in it.</li><li>That is all. We write when the beta opens, and again at launch.</li></ol>'
+                    f'<li>Press the confirm button in it.</li><li>That is all. We write when there is news, and again at launch.</li></ol>'
                     f'<p class="signup-note">Nothing in a few minutes? Look in Spam or Promotions. <button type="button" class="signup-again">Use a different address</button></p>'
                     f'</div></form>')
         b["signup"] = signup("", "page")
