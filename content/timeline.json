@@ -323,5 +323,33 @@
         "text": "Uploaded to TestFlight."
       }
     ]
+  },
+  {
+    "date": "2026-11-20",
+    "label": "Looking for players",
+    "summary": "A list of where testers gather, the trailer on TikTok, and an itch.io page with the Android build, waiting to go public.",
+    "events": [
+      {
+        "time": "22:15",
+        "title": "A new Android build",
+        "text": "With all of Day 7's sound. The first try failed on an emptied cook folder."
+      },
+      {
+        "time": "22:30",
+        "title": "Ten places to find players",
+        "text": "Ranked by how well each fits a mobile action game, with drafts for each.",
+        "link": "devlog/looking-for-players.html"
+      },
+      {
+        "time": "22:47",
+        "title": "The trailer on TikTok",
+        "text": "In English, labelled as AI-generated and as the owner's own product."
+      },
+      {
+        "time": "23:50",
+        "title": "An itch.io page",
+        "text": "AI-made cover and banner, real screenshots, and the 496 MB Android build pushed with butler. Still a draft."
+      }
+    ]
   }
 ]

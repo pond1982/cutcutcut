@@ -63,6 +63,9 @@ for n in ["porter", "pacer", "amagiri"]: full("ref-" + n, f"Art/{n.capitalize()}
 for n in ["1-rin", "2-hana", "3-homura", "4-winter-widow", "6-rin-cut"]:
     src = "Saved/EndCredits/photos/" + n + ".png"
     if os.path.exists(os.path.join(G, src)): full("photo-" + n[2:], src)
+# the itch.io page (Day 8): its cover, made with the image tool from the trailer's title card, and the page as a draft
+full("itch-cover", "Saved/Itch/20261119-170744-itch-cover.png", maxw=900)
+full("itch-page", "Saved/Itch/page-draft.jpg", maxw=900)
 # favicon and social card
 rin = Image.open(os.path.join(G, "Art/UI/rin_portrait.png")).convert("RGB")
 rin.resize((180, 180), Image.LANCZOS).save(os.path.join(OUT, "icon-180.png")); rin.resize((48, 48), Image.LANCZOS).save(os.path.join(OUT, "icon-48.png"))
