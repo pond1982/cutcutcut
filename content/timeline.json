@@ -327,7 +327,7 @@
   {
     "date": "2026-11-20",
     "label": "Looking for players",
-    "summary": "A list of where testers gather, the trailer on TikTok, and an itch.io page with the Android build, waiting to go public.",
+    "summary": "A list of where testers gather, the trailer on TikTok, and a public itch.io page with the Android build.",
     "events": [
       {
         "time": "22:15",
@@ -348,7 +348,8 @@
       {
         "time": "23:50",
         "title": "An itch.io page",
-        "text": "AI-made cover and banner, real screenshots, and the 496 MB Android build pushed with butler. Still a draft."
+        "text": "AI-made cover and banner, real screenshots, and the 496 MB Android build pushed with butler. Now public.",
+        "link": "https://unclepondd.itch.io/cut-cut-cut"
       }
     ]
   }

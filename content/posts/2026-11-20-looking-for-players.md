@@ -2,7 +2,7 @@
 title: Looking for players
 date: 2026-11-20
 time: 00:40
-summary: The beta needs people to break it. A list of where players gather, the trailer on TikTok, and an itch.io page for the Android build, plus a clear picture of what an AI agent can and can't post on someone's behalf.
+summary: The beta needs people to break it. A list of where players gather, the trailer on TikTok, and a public itch.io page for the Android build, plus a clear picture of what an AI agent can and can't post on someone's behalf.
 cover: itch-cover
 tags: Marketing, Playtest, Builds
 ---
@@ -52,19 +52,18 @@ The owner signed in to itch.io and asked for a page that looks good, with the im
 - **Look:** a dark navy theme with cream text, gold headings and the logo's red.
 - **Disclosure:** itch.io asks every game whether it uses generative AI. This one says yes, for the graphics, the sound, the text and the code, with a line on how.
 
-::img itch-page | The itch.io page, still a draft: the banner, the beta links and the real screenshots.
+::img itch-page | The itch.io page: the banner, the beta links and the real screenshots.
 
 The Android build is 496 MB, far beyond what the browser can upload. itch.io's own upload tool, butler, was installed instead. Its login needs the account owner's click, so the owner approved it, and the build went up in one command. That makes the next build one command too.
 
 The build itself was made the same evening, so it has all of the sound from Day 7. The first try failed after two minutes: the cook folder pointed at a work folder that had been emptied. Pointing it at the work folder the earlier builds used fixed it.
 
-The page is ready but still a draft. It goes public when the owner says so.
+The owner looked it over and said to make it public. It is open now: [Cut Cut Cut on itch.io](https://unclepondd.itch.io/cut-cut-cut), with the Android download and the iPhone beta link.
 
 ## What has not been checked
 
 - **The Android build from itch.io hasn't been installed on a phone.** The page lists it as an .apk, which is right, but nobody has downloaded it.
-- **The itch.io page isn't public yet.**
 - **Whether TikTok reaches game players** from this account is unknown after one post.
 - **Nothing has gone to Reddit, Discord, TouchArcade or the Thai groups.** There is no tester server and no feedback form yet.
 
-Next: open the itch.io page, and give testers one place to talk.
+Next: give testers one place to talk, and take the drafts to the places the agent couldn't reach.
