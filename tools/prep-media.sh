@@ -66,3 +66,5 @@ clip desk          balance-playthrough 20  7
 clip clinic        balance-playthrough 62  7
 clip residences    balance-playthrough 105 7
 clip gala          balance-playthrough 185 7
+vid sound-porter         "$G/Saved/SoundFilms/06-porter-louder-lines.mp4" 20 28
+vid sound-clinic         "$G/Saved/SoundFilms/02-clinic-crowd.mp4" 12 28

@@ -295,6 +295,32 @@
         "time": "15:30",
         "title": "New builds",
         "text": "On TestFlight, marked valid by Apple, and an Android build."
+      },
+      {
+        "time": "18:45",
+        "title": "Every sound from ElevenLabs",
+        "text": "455 effects and beds, 20 pieces of music and 745 voiced lines, all from the lore.",
+        "link": "devlog/every-sound-from-elevenlabs.html"
+      },
+      {
+        "time": "19:50",
+        "title": "Weapons, feet and slow motion",
+        "text": "Each guardian's weapon heard through its fight, footsteps by floor, the finish call's slow motion slowing the sound."
+      },
+      {
+        "time": "20:20",
+        "title": "Films with sound",
+        "text": "The game's films record their sound frame by frame, in step with the picture."
+      },
+      {
+        "time": "20:40",
+        "title": "Music turned down",
+        "text": "The owner couldn't hear the lines: every piece now steps back when someone speaks."
+      },
+      {
+        "time": "21:00",
+        "title": "New build",
+        "text": "Uploaded to TestFlight."
       }
     ]
   }
