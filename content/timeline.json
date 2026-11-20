@@ -387,6 +387,12 @@
     "time": "17:10",
     "title": "A new TestFlight build",
     "text": "Everything from the day, live on the public iPhone beta. Not played on a phone before it went out."
+   },
+   {
+    "time": "17:25",
+    "title": "A new Android build on itch.io",
+    "text": "The same build as the iPhone beta. Pushed with butler: 118 MB of new data on top of the last one.",
+    "link": "https://unclepondd.itch.io/cut-cut-cut"
    }
   ]
  }
