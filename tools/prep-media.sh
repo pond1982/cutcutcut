@@ -72,3 +72,4 @@ vid sound-clinic         "$G/Saved/SoundFilms/02-clinic-crowd.mp4" 12 28
 vid floor-job            "$G/Saved/Day8Films/job.mp4" 26 28
 vid floor-memo           "$G/Saved/Day8Films/memo.mp4" 4 28
 vid technique-stair      "$G/Saved/Day8Films/stair-cut.mp4" 18 28
+vid stair-door           "$G/Saved/Day8Films/stair-door.mp4" 16 28

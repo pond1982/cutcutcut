@@ -36,6 +36,12 @@ The owner could not get into the last room on floor 6. The guess was that the st
 
 A test over 200 towers put a number on it: the stairs stood in a doorway on 1,638 of 30,000 floors, about one in eighteen. The stairs now have to leave every door clear, and the same test finds none blocked.
 
+That fixed the doorway, but the owner still found the stairs on the wrong side of the room, and suggested a special door instead, so nothing stands in the way at all. So the stairs are gone from the room. The way up is now a double door set into the wall that faces the camera, with a stairs sign and an up arrow above it, a green exit sign, and a green mat on the floor in front. Standing on the mat takes Rin up. The doors and signs were already in the project's kits, so nothing had to be modelled.
+
+Over the same 200 towers the door lands on a wall in view on every floor, never beside a doorway. The first film showed the signs and no door: it was buried in the wall panel. The second shows it.
+
+::video stair-door | The way up as a door in the wall, on floor 3: signs above, a green mat to stand on, and the bot climbing from it.
+
 ## Eyes on the fight
 
 The combo and the ultimate each had a small button that appeared near the right thumb. To use one you had to find it, and to find it you had to stop watching the enemies. The owner often missed the combo because of that.
@@ -73,6 +79,7 @@ Every clip on this page was played by the game's bot on a Mac. That shows the pi
 
 - **Nobody has played any of this on a phone.** The two-thumb ultimate and the tap-on-gold combo are touch gestures, and the bot does not use touch at all.
 - **Balance is untested.** Without the cards' bonuses the early floors are a little harder, and nobody knows yet whether thirty seconds on the landing is fair.
+- **The stair door has been seen in one room.** On other floors a wall decoration could overlap it.
 - **Rin has no running animation.** Her walk is played faster for the sprint, and it may look wrong.
 - **Only the first six guardians teach a technique.** New moves of the sword's own, such as a cut straight out of a roll, are the next stage.
 - **None of it is in the beta yet.** The builds on TestFlight and itch.io are still the older ones.

@@ -376,6 +376,12 @@
     "time": "13:30",
     "title": "A quicker way back",
     "text": "Rin sprints when nothing is near, and the furthest rooms hold a reward."
+   },
+   {
+    "time": "16:00",
+    "title": "The stairs become a door",
+    "text": "A double door in the wall with signs and a green mat, so nothing stands in the room. From the kits already in the project.",
+    "link": "devlog/floors-that-play-differently.html"
    }
   ]
  }
