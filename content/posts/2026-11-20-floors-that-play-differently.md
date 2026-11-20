@@ -82,8 +82,8 @@ Every clip on this page was played by the game's bot on a Mac. That shows the pi
 - **The stair door has been seen in one room.** On other floors a wall decoration could overlap it.
 - **Rin has no running animation.** Her walk is played faster for the sprint, and it may look wrong.
 - **Only the first six guardians teach a technique.** New moves of the sword's own, such as a cut straight out of a roll, are the next stage.
-- **None of it is in the beta yet.** The builds on TestFlight and itch.io are still the older ones.
+- **It is in the iPhone beta, not yet on Android.** The TestFlight build went out the same evening with everything on this page. The Android build on itch.io is still the older one.
 
 The Android build and the game's page are on [itch.io](https://unclepondd.itch.io/cut-cut-cut); the iPhone beta is on TestFlight.
 
-Next: a build for the owner's phone, and then the same list again.
+Next: the owner plays it on a phone, and then the same list again.
