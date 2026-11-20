@@ -52,14 +52,12 @@ Between floors the game dealt poker cards, and the hand you held changed how Rin
 
 So the cards are switched off, and each guardian now teaches the sword one **technique**. The first six were already in the game, hidden behind which hand you held. Every one pays only when you dodge or counter well, so none is a flat number to balance around.
 
-| Guardian's floor | Technique | What it does |
-|---|---|---|
-| 5 | Riposte | Roll through a blow and the next cut hits much harder |
-| 10 | Counter-cut | Double damage on an enemy winding up |
-| 15 | Borrowed Breath | A timed roll gives stamina back |
-| 20 | Long Draw | After such a roll, the next heavy cut reaches further |
-| 25 | Last Stand | Survive one killing blow a floor |
-| 30 | Dawn Cut | Once a floor, a full string of cuts fills the ultimate |
+- **Floor 5, Riposte:** roll through a blow and the next cut hits much harder.
+- **Floor 10, Counter-cut:** double damage on an enemy winding up.
+- **Floor 15, Borrowed Breath:** a timed roll gives stamina back.
+- **Floor 20, Long Draw:** after such a roll, the next heavy cut reaches further.
+- **Floor 25, Last Stand:** survive one killing blow a floor.
+- **Floor 30, Dawn Cut:** once a floor, a full string of cuts fills the ultimate.
 
 The stair between floors is now one page: what the guardian taught, and a button to climb.
 
