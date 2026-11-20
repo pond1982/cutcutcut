@@ -68,3 +68,7 @@ clip residences    balance-playthrough 105 7
 clip gala          balance-playthrough 185 7
 vid sound-porter         "$G/Saved/SoundFilms/06-porter-louder-lines.mp4" 20 28
 vid sound-clinic         "$G/Saved/SoundFilms/02-clinic-crowd.mp4" 12 28
+# Day 8: a job floor, a memo floor, and the stair page that teaches a technique (floor 5 with its guardian switched off)
+vid floor-job            "$G/Saved/Day8Films/job.mp4" 26 28
+vid floor-memo           "$G/Saved/Day8Films/memo.mp4" 4 28
+vid technique-stair      "$G/Saved/Day8Films/stair-cut.mp4" 18 28

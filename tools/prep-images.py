@@ -66,6 +66,8 @@ for n in ["1-rin", "2-hana", "3-homura", "4-winter-widow", "6-rin-cut"]:
 # the itch.io page (Day 8): its cover, made with the image tool from the trailer's title card, and the page as a draft
 full("itch-cover", "Saved/Itch/20261119-170744-itch-cover.png", maxw=900)
 full("itch-page", "Saved/Itch/page-draft.jpg", maxw=900)
+# a job floor (Day 8, second post): a frame of the film, the first timesheet found
+full("floor-job", "Saved/Day8Films/floor-job.png", maxw=1280)
 # favicon and social card
 rin = Image.open(os.path.join(G, "Art/UI/rin_portrait.png")).convert("RGB")
 rin.resize((180, 180), Image.LANCZOS).save(os.path.join(OUT, "icon-180.png")); rin.resize((48, 48), Image.LANCZOS).save(os.path.join(OUT, "icon-48.png"))

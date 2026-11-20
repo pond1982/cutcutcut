@@ -31,6 +31,7 @@ def stamp(name):
     when it changes instead of showing new pages with an old cached stylesheet."""
     return hashlib.sha1((ROOT / "static" / name).read_bytes()).hexdigest()[:8]
 TESTFLIGHT = "https://testflight.apple.com/join/PsPjMSvH"  # the iPhone public beta
+ITCH = "https://unclepondd.itch.io/cut-cut-cut"  # the Android build (an .apk) and the game's itch.io page
 
 
 def nav_signup(root):
@@ -258,13 +259,14 @@ def blocks(root, posts):
     su = SITE.get("signup")
     if su:
         # The public beta, in the same box: a tile per phone. The iPhone's has the TestFlight QR code (for someone
-        # reading on a computer) and a button (for someone already on the phone); Android's says it is coming.
+        # reading on a computer) and a button (for someone already on the phone); Android's is the same, to the game's itch.io page.
         b["beta"] = (f'<div class="signup-beta beta-box">'
                 f'<div class="beta-tile"><p class="beta-os">iPhone</p>'
                 f'<a class="beta-qr" href="{TESTFLIGHT}"><img src="{root}media/img/testflight-qr.svg" width="120" height="120" alt="QR code for the TestFlight beta"></a>'
                 f'<a class="btn red beta-join" href="{TESTFLIGHT}"><span>Join on TestFlight</span></a></div>'
-                f'<div class="beta-tile soon"><p class="beta-os">Android</p><div class="beta-wait">Coming <br>soon</div>'
-                f'<p class="beta-later">Leave your email at the top of the page and you will hear first.</p></div></div>')
+                f'<div class="beta-tile"><p class="beta-os">Android</p>'
+                f'<a class="beta-qr" href="{ITCH}"><img src="{root}media/img/itch-qr.svg" width="120" height="120" alt="QR code for the Android beta on itch.io"></a>'
+                f'<a class="btn red beta-join" href="{ITCH}"><span>Get it on itch.io</span></a></div></div>')
         def signup(cls, key):
             return (f'<form class="signup {cls}" action="{esc(su["action"])}" method="post" target="_blank" novalidate>'
                     f'<div class="signup-row"><label class="sr" for="su-email-{key}">Email address</label>'
